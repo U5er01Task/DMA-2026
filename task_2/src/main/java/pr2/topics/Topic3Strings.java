@@ -80,7 +80,7 @@ public class Topic3Strings {
             sensor[i] = 9.8 + random.nextGaussian();
         }
         sensor[57] = 19.5; // имитируем резкий удар
-        System.out.printf("4) Максимальный всплеск: %.3f м/с²%n", maxSpike(sensor));
+        System.out.printf("4) Максимальный всплеск: %.3f м/с^2%n", maxSpike(sensor));
 
         System.out.println("5) " + buildQuery(new String[]{"q", "page", "sort"},
                 new String[]{"phone", "2", "price_asc"}));

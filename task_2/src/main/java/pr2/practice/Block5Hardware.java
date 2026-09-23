@@ -43,9 +43,9 @@ public class Block5Hardware {
     // 44. Детектор падения
     public static String detectFall(double x, double y, double z) {
         double magnitude = Math.sqrt(x * x + y * y + z * z);
-        if (magnitude < 2.0) return String.format(Locale.US, "НЕВЕСОМОСТЬ (%.1f м/с²) — телефон падает", magnitude);
-        if (magnitude > 25.0) return String.format(Locale.US, "УДАР (%.1f м/с²)", magnitude);
-        return String.format(Locale.US, "норма (%.1f м/с²)", magnitude);
+        if (magnitude < 2.0) return String.format(Locale.US, "НЕВЕСОМОСТЬ (%.1f м/с^2) - телефон падает", magnitude);
+        if (magnitude > 25.0) return String.format(Locale.US, "УДАР (%.1f м/с^2)", magnitude);
+        return String.format(Locale.US, "норма (%.1f м/с^2)", magnitude);
     }
 
     // 45. Шагомер по локальным максимумам
@@ -142,8 +142,8 @@ public class Block5Hardware {
         System.out.println("=== Блок 5 ===");
 
         double user = haversine(55.7558, 37.6173, 55.7520, 37.6175);
-        System.out.printf(Locale.US, "41) пользователь — курьер: %.0f м%n", user);
-        System.out.printf(Locale.US, "    Москва — Санкт-Петербург: %.0f км%n",
+        System.out.printf(Locale.US, "41) пользователь - курьер: %.0f м%n", user);
+        System.out.printf(Locale.US, "    Москва - Санкт-Петербург: %.0f км%n",
                 haversine(55.7558, 37.6173, 59.9343, 30.3351) / 1000);
 
         System.out.println("42) точка в 420 м от центра, радиус 500 м: "

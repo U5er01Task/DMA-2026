@@ -103,7 +103,7 @@ public class Topic8Collections {
         sortProducts(products);
         System.out.println("4) Отсортировано:");
         for (Product p : products) {
-            System.out.println("   " + p.title() + " — " + p.price() + " руб., рейтинг " + p.rating());
+            System.out.println("   " + p.title() + " - " + p.price() + " руб., рейтинг " + p.rating());
         }
 
         ScreenCache<String, String> cache = new ScreenCache<>(5);
