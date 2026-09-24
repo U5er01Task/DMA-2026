@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Тема 5, задание 4. Ограничение WRITE_EXTERNAL_STORAGE до Android 9
+
+    С Android 10 (API 29) действует Scoped Storage: в свои папки и MediaStore можно писать без разрешения.
+    maxSdkVersion="28" - на Android 10+ разрешение не запрашивается и не показывается в Google Play.
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="ru.kulikov.pr3">
+
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28" />
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+
+    <application android:label="@string/app_name"
+        android:icon="@mipmap/ic_launcher"
+        android:theme="@style/Theme.App" />
+
+</manifest>

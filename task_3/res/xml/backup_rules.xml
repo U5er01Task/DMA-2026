@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Блок 2, задание 18. Правила бэкапа для Android 11 и ниже (android:fullBackupContent) -->
+<full-backup-content>
+    <include domain="sharedpref" path="settings.xml" />
+    <exclude domain="sharedpref" path="auth_tokens.xml" />
+    <exclude domain="database" path="payments.db" />
+</full-backup-content>

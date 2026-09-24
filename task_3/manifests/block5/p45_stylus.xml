@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Практика 45. Стилус и планшетный ввод
+
+    touchscreen.multitouch.jazzhand - сенсор различает 5+ касаний одновременно (рисование, жесты ладонью).
+    faketouch не нужен - наличие стилуса отдельной фичей в Android не описывается,
+    его события (TOOL_TYPE_STYLUS, давление, наклон) проверяются в коде через MotionEvent.
+    Все фичи необязательные, чтобы приложение оставалось доступно на телефонах.
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="ru.kulikov.pr3">
+
+    <uses-feature
+        android:name="android.hardware.touchscreen"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.touchscreen.multitouch.distinct"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.touchscreen.multitouch.jazzhand"
+        android:required="false" />
+
+    <application android:label="@string/app_name"
+        android:icon="@mipmap/ic_launcher"
+        android:theme="@style/Theme.App">
+
+        <activity
+            android:name=".draw.DrawingActivity"
+            android:exported="false"
+            android:resizeableActivity="true" />
+
+    </application>
+
+</manifest>

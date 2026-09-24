@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Практика 8. Экран мастер-пароля не виден в "Недавних"
+
+    excludeFromRecents - задача не попадает в список недавних приложений.
+    noHistory - после ухода с экрана он закрывается, вернуться кнопкой "Назад" нельзя.
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="ru.kulikov.pr3">
+
+    <application android:label="@string/app_name"
+        android:icon="@mipmap/ic_launcher"
+        android:theme="@style/Theme.App">
+
+        <activity
+            android:name=".security.MasterPasswordActivity"
+            android:exported="false"
+            android:excludeFromRecents="true"
+            android:noHistory="true"
+            android:taskAffinity=".security" />
+
+    </application>
+
+</manifest>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Практика 46. Запрет работы на старых экранах низкой плотности
+
+    <supports-screens> работает с РАЗМЕРАМИ экрана (small/normal/large/xlarge), а не с плотностью.
+    Поэтому:
+      - smallScreens="false" отсекает маленькие старые экраны (обычно это ldpi-устройства);
+      - largestWidthLimitDp не задаем, чтобы не ломать планшеты.
+    Для фильтрации именно по плотности (ldpi) в Google Play есть <compatible-screens>,
+    но Google не рекомендует его - он отключает приложение на всех неперечисленных комбинациях.
+    Поэтому основная защита - minSdkVersion (ldpi-устройств на Android 7+ практически нет).
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="ru.kulikov.pr3">
+
+    <supports-screens
+        android:smallScreens="false"
+        android:normalScreens="true"
+        android:largeScreens="true"
+        android:xlargeScreens="true"
+        android:anyDensity="true"
+        android:requiresSmallestWidthDp="320" />
+
+    <application android:label="@string/app_name"
+        android:icon="@mipmap/ic_launcher"
+        android:theme="@style/Theme.App" />
+
+</manifest>

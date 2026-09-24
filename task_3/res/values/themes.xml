@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Основная тема приложения -->
+    <style name="Theme.App" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:colorPrimary">@color/brand</item>
+        <item name="android:colorAccent">@color/brand</item>
+    </style>
+
+    <!-- Тема стартового экрана. На Android 12+ переопределяется в values-v31 -->
+    <style name="Theme.App.Starting" parent="Theme.App">
+        <item name="android:windowBackground">@color/brand</item>
+    </style>
+
+    <!-- Тема для экрана с большими картинками в графическом редакторе -->
+    <style name="Theme.App.Fullscreen" parent="android:Theme.Material.NoActionBar.Fullscreen" />
+
+    <color name="brand">#FF1E88E5</color>
+    <color name="splash_background">#FF0D47A1</color>
+</resources>

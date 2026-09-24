@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Практика 18. Правила резервного копирования
+
+    fullBackupContent  - Android 6-11 (res/xml/backup_rules.xml)
+    dataExtractionRules - Android 12+ (res/xml/data_extraction_rules.xml)
+    Токены авторизации и база платежей в бэкап не попадают.
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="ru.kulikov.pr3">
+
+    <application
+        android:label="@string/app_name"
+        android:icon="@mipmap/ic_launcher"
+        android:theme="@style/Theme.App"
+        android:allowBackup="true"
+        android:fullBackupContent="@xml/backup_rules"
+        android:dataExtractionRules="@xml/data_extraction_rules" />
+
+</manifest>

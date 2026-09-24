@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Практика 15. Запрет отладки в продакшене
+
+    android:debuggable="true" в релизе = можно подключить отладчик и через "adb shell run-as"
+    прочитать все файлы приложения.
+    Правильно: не писать атрибут руками, Gradle сам ставит false для release (debuggable false в buildTypes).
+    Если библиотека или старый манифест выставляет true - принудительно заменяем через tools:replace.
+    Lint выдает на жестко прописанное значение предупреждение HardcodedDebugMode, поэтому его подавляем явно.
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="ru.kulikov.pr3">
+
+    <application
+        android:label="@string/app_name"
+        android:icon="@mipmap/ic_launcher"
+        android:theme="@style/Theme.App"
+        android:debuggable="false"
+        tools:replace="android:debuggable"
+        tools:ignore="HardcodedDebugMode" />
+
+</manifest>

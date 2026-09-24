@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Тема 7, задание 4. Отключение автоинициализации androidx.startup
+
+    Вариант 1: убрать один инициализатор (WorkManager) - остальные Initializer'ы работают.
+    tools:node="remove" на meta-data удаляет его из итогового манифеста при слиянии.
+    Вариант 2 (закомментирован): отключить InitializationProvider целиком.
+    После этого инициализацию вызываем вручную: AppInitializer.getInstance(context).initializeComponent(...).
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="ru.kulikov.pr3">
+
+    <application android:label="@string/app_name"
+        android:icon="@mipmap/ic_launcher"
+        android:theme="@style/Theme.App">
+
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:authorities="${applicationId}.androidx-startup"
+            android:exported="false"
+            tools:node="merge">
+            <meta-data
+                android:name="androidx.work.WorkManagerInitializer"
+                android:value="androidx.startup"
+                tools:node="remove" />
+        </provider>
+
+        <!--
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:authorities="${applicationId}.androidx-startup"
+            tools:node="remove" />
+        -->
+
+    </application>
+
+</manifest>

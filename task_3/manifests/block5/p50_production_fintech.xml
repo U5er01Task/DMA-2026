@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Практика 50. Итоговый production-манифест финтех-приложения
+
+    Что есть:
+      - стартовый экран SplashActivity (единственный LAUNCHER, тема Theme.App.Starting);
+      - FileProvider для фото документов (exported="false");
+      - три опасных разрешения: CAMERA, ACCESS_FINE_LOCATION (+ COARSE), POST_NOTIFICATIONS;
+      - App Link https://bank.example/pay/ с autoVerify;
+      - строгая сетевая политика: только HTTPS, SSL-pinning (network_security_config);
+      - бэкап полностью запрещен, данные не переносятся на другое устройство;
+      - все внутренние компоненты exported="false";
+      - свой signature-permission для внутренних broadcast'ов.
+    Этот манифест собирается в APK (build-apk.bat) и проверяется через aapt2 dump badging.
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="ru.kulikov.pr3">
+
+    <!-- Сеть -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <!-- Опасные (runtime) разрешения -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <!-- Биометрия -->
+    <uses-permission android:name="android.permission.USE_BIOMETRIC" />
+
+    <!-- Внутреннее разрешение для своих broadcast'ов -->
+    <permission
+        android:name="ru.kulikov.pr3.permission.INTERNAL_EVENTS"
+        android:protectionLevel="signature" />
+    <uses-permission android:name="ru.kulikov.pr3.permission.INTERNAL_EVENTS" />
+
+    <!--
+        CAMERA и ACCESS_*_LOCATION неявно делают камеру и геолокацию ОБЯЗАТЕЛЬНЫМИ
+        (видно в aapt2 dump badging: uses-implied-feature). Явно указываем required="false",
+        иначе Google Play не покажет приложение на устройствах без задней камеры.
+    -->
+    <uses-feature android:name="android.hardware.camera" android:required="false" />
+    <uses-feature android:name="android.hardware.location" android:required="false" />
+    <uses-feature android:name="android.hardware.camera.any" android:required="false" />
+    <uses-feature android:name="android.hardware.fingerprint" android:required="false" />
+    <uses-feature android:name="android.hardware.location.gps" android:required="false" />
+
+    <queries>
+        <intent>
+            <action android:name="android.media.action.IMAGE_CAPTURE" />
+        </intent>
+    </queries>
+
+    <application
+        android:name=".MainApplication"
+        android:label="@string/app_name"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:theme="@style/Theme.App"
+        android:supportsRtl="true"
+        android:allowBackup="false"
+        android:fullBackupContent="false"
+        android:dataExtractionRules="@xml/data_extraction_rules_none"
+        android:usesCleartextTraffic="false"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:localeConfig="@xml/locales_config"
+        android:hasFragileUserData="false"
+        tools:targetApi="35">
+
+        <!-- Стартовый экран -->
+        <activity
+            android:name=".ui.SplashActivity"
+            android:exported="true"
+            android:theme="@style/Theme.App.Starting">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Вход по PIN / отпечатку -->
+        <activity
+            android:name=".auth.LoginActivity"
+            android:exported="false"
+            android:excludeFromRecents="true"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- Главный экран -->
+        <activity
+            android:name=".ui.MainActivity"
+            android:exported="false"
+            android:launchMode="singleTask" />
+
+        <!-- Оплата по ссылке: https://bank.example/pay/... -->
+        <activity
+            android:name=".payments.PaymentLinkActivity"
+            android:exported="true"
+            android:launchMode="singleTop">
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="https" />
+                <data android:host="bank.example" />
+                <data android:pathPrefix="/pay/" />
+            </intent-filter>
+        </activity>
+
+        <!-- Подтверждение платежа (защита от tapjacking в layout) -->
+        <activity
+            android:name=".payments.PaymentConfirmActivity"
+            android:exported="false"
+            android:excludeFromRecents="true" />
+
+        <!-- Внутренние события (разлогин по таймауту) -->
+        <receiver
+            android:name=".auth.SessionExpiredReceiver"
+            android:exported="false"
+            android:permission="ru.kulikov.pr3.permission.INTERNAL_EVENTS" />
+
+        <!-- Фото паспорта для верификации -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="ru.kulikov.pr3.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+    </application>
+
+</manifest>

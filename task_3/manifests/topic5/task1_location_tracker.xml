@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Тема 5, задание 1. Разрешения для фонового геотрекера
+
+    COARSE + FINE          - запрашиваются вместе (Android 12+ пользователь может выбрать "приблизительно")
+    BACKGROUND_LOCATION    - Android 10+, запрашивается ОТДЕЛЬНО и только после выдачи FINE/COARSE,
+                             на Android 11+ пользователь включает его в настройках ("Разрешить всегда")
+    FOREGROUND_SERVICE_*   - для непрерывного трекинга нужен foreground service типа location
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="ru.kulikov.pr3">
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_LOCATION" />
+
+    <uses-feature android:name="android.hardware.location.gps" android:required="false" />
+
+    <application android:label="@string/app_name"
+        android:icon="@mipmap/ic_launcher"
+        android:theme="@style/Theme.App">
+
+        <service
+            android:name=".tracking.TrackingService"
+            android:exported="false"
+            android:foregroundServiceType="location" />
+
+    </application>
+
+</manifest>

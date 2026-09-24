@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Тема 6, задание 3. Проверка установленных Яндекс Карт и 2ГИС
+
+    Android 11+ (Package Visibility): без <queries> getPackageInfo() вернет "не установлено",
+    даже если приложение есть на телефоне.
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="ru.kulikov.pr3">
+
+    <queries>
+        <!-- Яндекс Карты -->
+        <package android:name="ru.yandex.yandexmaps" />
+        <!-- 2ГИС -->
+        <package android:name="ru.dublgis.dgismobile" />
+        <!-- любые приложения, умеющие открывать geo: ссылки -->
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+            <data android:scheme="geo" />
+        </intent>
+    </queries>
+
+    <application android:label="@string/app_name"
+        android:icon="@mipmap/ic_launcher"
+        android:theme="@style/Theme.App" />
+
+</manifest>

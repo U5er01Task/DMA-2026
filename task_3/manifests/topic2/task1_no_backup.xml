@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Тема 2, задание 1. Финансовое приложение: запрет бэкапа и извлечения данных
+
+    allowBackup="false"       - нельзя сделать "adb backup" и облачный бэкап (Android 11 и ниже)
+    fullBackupContent="false" - то же для старого механизма Auto Backup
+    dataExtractionRules       - Android 12+: исключаем все домены и для облака, и для переноса на новое устройство
+    hasFragileUserData="false"- при удалении не предлагать пользователю сохранить данные
+    debuggable не указываем   - в release его выставляет сборщик (false), иначе run-as даст доступ к файлам
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="ru.kulikov.pr3">
+
+    <application
+        android:label="@string/app_name"
+        android:icon="@mipmap/ic_launcher"
+        android:theme="@style/Theme.App"
+        android:allowBackup="false"
+        android:fullBackupContent="false"
+        android:dataExtractionRules="@xml/data_extraction_rules_none"
+        android:hasFragileUserData="false" />
+
+</manifest>

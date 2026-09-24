@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Практика 1. Конфликт minSdkVersion с библиотекой (tools:overrideLibrary)
+
+    Библиотека com.example.charts требует minSdk 24, а у проекта 21.
+    tools:overrideLibrary разрешает сборку, но ответственность на нас:
+    на Android 5-6 перед вызовом библиотеки нужно проверять Build.VERSION.SDK_INT >= 24,
+    иначе будет краш (NoSuchMethodError).
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="ru.kulikov.pr3">
+
+    <uses-sdk
+        android:minSdkVersion="21"
+        tools:overrideLibrary="com.example.charts" />
+
+    <application android:label="@string/app_name"
+        android:icon="@mipmap/ic_launcher"
+        android:theme="@style/Theme.App" />
+
+</manifest>

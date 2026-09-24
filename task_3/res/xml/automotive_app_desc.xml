@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Блок 5, задание 43. Android Auto: приложение предоставляет медиаконтент -->
+<automotiveApp>
+    <uses name="media" />
+</automotiveApp>

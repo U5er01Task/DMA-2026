@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Тема 2, задание 2. Подключение SSL-Pinning конфига
+
+    Сам конфиг: res/xml/network_security_config.xml
+    (cleartext запрещен, pin-set из двух SHA-256 хэшей для api.bank.example).
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="ru.kulikov.pr3">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:label="@string/app_name"
+        android:icon="@mipmap/ic_launcher"
+        android:theme="@style/Theme.App"
+        android:usesCleartextTraffic="false"
+        android:networkSecurityConfig="@xml/network_security_config" />
+
+</manifest>

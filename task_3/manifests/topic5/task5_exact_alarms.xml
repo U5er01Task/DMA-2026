@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Тема 5, задание 5. Точные будильники SCHEDULE_EXACT_ALARM
+
+    SCHEDULE_EXACT_ALARM (Android 12+) - пользователь может отозвать его в настройках,
+    а на Android 14 для новых установок оно по умолчанию ВЫКЛЮЧЕНО.
+    USE_EXACT_ALARM (Android 13+) выдается сразу, но Google Play разрешает его только
+    приложениям, у которых точные будильники - основная функция: будильники, таймеры, календари.
+    Остальным приложениям Google Play откажет в публикации, если использовать USE_EXACT_ALARM
+    без веской причины. Для обычных напоминаний лучше WorkManager или неточные alarm'ы.
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="ru.kulikov.pr3">
+
+    <uses-permission
+        android:name="android.permission.SCHEDULE_EXACT_ALARM"
+        android:maxSdkVersion="32" />
+    <!-- только если приложение - будильник или календарь -->
+    <uses-permission android:name="android.permission.USE_EXACT_ALARM" />
+
+    <application android:label="@string/app_name"
+        android:icon="@mipmap/ic_launcher"
+        android:theme="@style/Theme.App">
+
+        <receiver
+            android:name=".alarm.AlarmReceiver"
+            android:exported="false" />
+
+    </application>
+
+</manifest>

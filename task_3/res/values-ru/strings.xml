@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Лаба по манифесту</string>
+    <string name="app_name_newyear">Лаба по манифесту: Новый год</string>
+    <string name="search_label">Поиск</string>
+    <string name="search_hint">Поиск товаров</string>
+    <string name="accessibility_description">Озвучивает содержимое экрана</string>
+    <string name="wallpaper_name">Звездная ночь</string>
+    <string name="account_label">Аккаунт Manifest Lab</string>
+    <string name="tests_label">UI-тесты</string>
+    <string name="shortcut_order_short">Заказ</string>
+    <string name="shortcut_order_long">Заказать еду</string>
+</resources>

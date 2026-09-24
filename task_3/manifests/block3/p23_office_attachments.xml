@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Практика 23. Вложения .docx и .xlsx из почты
+
+    Почтовые клиенты отдают вложения как content:// с MIME-типом, расширения в пути может не быть.
+    Поэтому фильтруем по точным MIME-типам Office. Вариант "application/*" из задания
+    тоже работает, но тогда приложение будет предлагаться для ЛЮБЫХ файлов (zip, apk, pdf...),
+    поэтому я его не использовал.
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="ru.kulikov.pr3">
+
+    <application android:label="@string/app_name"
+        android:icon="@mipmap/ic_launcher"
+        android:theme="@style/Theme.App">
+
+        <activity
+            android:name=".docs.OfficeViewerActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="content" />
+                <data android:scheme="file" />
+                <data android:mimeType="application/vnd.openxmlformats-officedocument.wordprocessingml.document" />
+                <data android:mimeType="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" />
+            </intent-filter>
+        </activity>
+
+    </application>
+
+</manifest>

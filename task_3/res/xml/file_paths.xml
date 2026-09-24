@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Папки, которые FileProvider может отдавать наружу через content:// -->
+<paths>
+    <!-- Снимки камеры: /Android/data/<пакет>/files/Pictures/camera -->
+    <external-files-path name="camera_photos" path="Pictures/camera/" />
+    <!-- Временные файлы для "Поделиться" -->
+    <cache-path name="shared_cache" path="shared/" />
+</paths>

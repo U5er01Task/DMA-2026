@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Практика 9. Защита от скриншотов и превью в списке задач
+
+    Ответ:
+      - В манифесте нет атрибута, который запрещает скриншоты. Это делается только в коде:
+            window.setFlags(FLAG_SECURE, FLAG_SECURE)
+        FLAG_SECURE запрещает скриншоты, запись экрана и показывает черное превью в "Недавних".
+      - Из манифеста на превью влияют:
+            excludeFromRecents="true" - задачи вообще нет в списке, превью не видно;
+            autoRemoveFromRecents="true" - задача убирается из списка после закрытия;
+            отдельная taskAffinity - экран уходит в свою задачу, не смешиваясь с основной.
+      - На Android 13+ есть Activity.setRecentsScreenshotEnabled(false) - убирает только превью,
+        но скриншоты разрешает. Для банковских экранов нужен именно FLAG_SECURE.
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="ru.kulikov.pr3">
+
+    <application android:label="@string/app_name"
+        android:icon="@mipmap/ic_launcher"
+        android:theme="@style/Theme.App">
+
+        <activity
+            android:name=".security.CardDetailsActivity"
+            android:exported="false"
+            android:excludeFromRecents="true"
+            android:autoRemoveFromRecents="true"
+            android:taskAffinity=".secure" />
+
+    </application>
+
+</manifest>

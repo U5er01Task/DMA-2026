@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Практика 30. Открытие файлов .mycfg
+
+    Для файлов со своим расширением нет MIME-типа, поэтому фильтр по пути: .*\\.mycfg
+    Точка может встречаться в пути несколько раз - pathPattern не жадный, поэтому
+    добавлены варианты для одной и двух точек в имени папок.
+    host="*" обязателен, иначе pathPattern игнорируется.
+    Ограничение: для content:// URI (Загрузки, Google Диск) путь обычно не содержит имени файла,
+    тогда сработает только выбор через "Открыть с помощью" (второй фильтр по mimeType).
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="ru.kulikov.pr3">
+
+    <application android:label="@string/app_name"
+        android:icon="@mipmap/ic_launcher"
+        android:theme="@style/Theme.App">
+
+        <activity
+            android:name=".config.ConfigImportActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="file" />
+                <data android:scheme="content" />
+                <data android:host="*" />
+                <data android:mimeType="*/*" />
+                <data android:pathPattern=".*\\.mycfg" />
+                <data android:pathPattern=".*\\..*\\.mycfg" />
+                <data android:pathPattern=".*\\..*\\..*\\.mycfg" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="content" />
+                <data android:mimeType="application/octet-stream" />
+            </intent-filter>
+        </activity>
+
+    </application>
+
+</manifest>
