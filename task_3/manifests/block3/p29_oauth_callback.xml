@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Практика 29. OAuth редирект org.example.app://oauth-callback
+
+    После входа в Custom Tab сервер перенаправляет на org.example.app://oauth-callback?code=...
+    singleTask - вернемся в уже открытый экран, а не создадим новый поверх браузера.
+    Совет по безопасности: кастомную схему может перехватить другое приложение,
+    поэтому обязательно использовать PKCE (code_verifier / code_challenge).
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="ru.kulikov.pr3">
+
+    <application android:label="@string/app_name"
+        android:icon="@mipmap/ic_launcher"
+        android:theme="@style/Theme.App">
+
+        <activity
+            android:name=".auth.OAuthCallbackActivity"
+            android:exported="true"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="org.example.app" />
+                <data android:host="oauth-callback" />
+            </intent-filter>
+        </activity>
+
+    </application>
+
+</manifest>

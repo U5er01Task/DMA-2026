@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Название по умолчанию (английский) -->
+    <string name="app_name">Manifest Lab</string>
+    <string name="app_name_newyear">Manifest Lab: New Year</string>
+
+    <!-- Ключи сторонних SDK. В реальном проекте подставляются из local.properties / CI -->
+    <string name="google_maps_key" translatable="false">GOOGLE_MAPS_KEY_PLACEHOLDER</string>
+    <string name="yandex_mapkit_key" translatable="false">YANDEX_MAPKIT_KEY_PLACEHOLDER</string>
+
+    <string name="search_label">Search</string>
+    <string name="search_hint">Search products</string>
+    <string name="accessibility_description">Reads the screen aloud</string>
+    <string name="wallpaper_name">Starry night</string>
+    <string name="account_label">Manifest Lab account</string>
+    <string name="tests_label">UI tests</string>
+    <string name="shortcut_order_short">Order</string>
+    <string name="shortcut_order_long">Order food</string>
+</resources>

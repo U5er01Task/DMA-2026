@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Блок 2, задание 19. Защита от Overlay-атак (Tapjacking).
+    В манифесте отдельного атрибута для этого нет: фильтрация касаний включается у View.
+    filterTouchesWhenObscured="true" - касания игнорируются, если поверх окна
+    нарисовано другое (например, прозрачное окно вредоносного приложения).
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:filterTouchesWhenObscured="true">
+
+    <TextView
+        android:id="@+id/amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10 000 RUB" />
+
+    <Button
+        android:id="@+id/confirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:filterTouchesWhenObscured="true"
+        android:text="OK" />
+</LinearLayout>

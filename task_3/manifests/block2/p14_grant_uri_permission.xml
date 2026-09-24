@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Практика 14. Временные права на URI только для /shared_docs/
+
+    grantUriPermissions="false" + <grant-uri-permission> - временный доступ (FLAG_GRANT_READ_URI_PERMISSION)
+    можно выдать только к путям, начинающимся с /shared_docs/. Остальные данные провайдера закрыты.
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="ru.kulikov.pr3">
+
+    <application android:label="@string/app_name"
+        android:icon="@mipmap/ic_launcher"
+        android:theme="@style/Theme.App">
+
+        <provider
+            android:name=".data.DocumentsProvider"
+            android:authorities="ru.kulikov.pr3.documents"
+            android:exported="false"
+            android:grantUriPermissions="false">
+            <grant-uri-permission android:pathPrefix="/shared_docs/" />
+        </provider>
+
+    </application>
+
+</manifest>

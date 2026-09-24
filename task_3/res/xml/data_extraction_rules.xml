@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Блок 2, задание 18. Правила для Android 12+ (android:dataExtractionRules) -->
+<data-extraction-rules>
+    <cloud-backup>
+        <include domain="sharedpref" path="settings.xml" />
+        <exclude domain="sharedpref" path="auth_tokens.xml" />
+        <exclude domain="database" path="payments.db" />
+    </cloud-backup>
+    <!-- перенос на новое устройство (кабель / Quick Share) -->
+    <device-transfer>
+        <exclude domain="sharedpref" path="auth_tokens.xml" />
+        <exclude domain="database" path="payments.db" />
+    </device-transfer>
+</data-extraction-rules>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Практика 11. Сервис в изолированном процессе
+
+    isolatedProcess="true" - сервис запускается в процессе с отдельным UID без каких-либо разрешений
+    и без доступа к файлам приложения. Даже если внутри выполнится вредоносный код
+    (например, при разборе чужого файла или загрузке плагина), он ничего не сможет прочитать.
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="ru.kulikov.pr3">
+
+    <application android:label="@string/app_name"
+        android:icon="@mipmap/ic_launcher"
+        android:theme="@style/Theme.App">
+
+        <service
+            android:name=".sandbox.FileParserService"
+            android:exported="false"
+            android:isolatedProcess="true"
+            android:process=":sandbox" />
+
+    </application>
+
+</manifest>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Практика 41. Складные смартфоны: соотношение сторон
+
+    Важно: minAspectRatio / maxAspectRatio действуют только для НЕ растягиваемых Activity
+    (resizeableActivity="false"). Растягиваемая Activity просто занимает все окно.
+    Поэтому:
+      - MainActivity поддерживает любые размеры и сгиб экрана (resizeableActivity="true");
+      - CameraActivity фиксирует пропорции от 1.33 (4:3) до 2.4 (21:9 - вытянутые смартфоны).
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="ru.kulikov.pr3">
+
+    <application
+        android:label="@string/app_name"
+        android:icon="@mipmap/ic_launcher"
+        android:theme="@style/Theme.App"
+        android:resizeableActivity="true">
+
+        <activity
+            android:name=".ui.MainActivity"
+            android:exported="false"
+            android:resizeableActivity="true"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation" />
+
+        <activity
+            android:name=".camera.CameraActivity"
+            android:exported="false"
+            android:resizeableActivity="false"
+            android:minAspectRatio="1.33"
+            android:maxAspectRatio="2.4" />
+
+    </application>
+
+</manifest>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Тема 4, задание 5. App Link с авто-верификацией
+
+    autoVerify="true" - при установке Android скачивает https://store.university.ru/.well-known/assetlinks.json
+    и проверяет, что там указаны наш package и SHA-256 отпечаток сертификата подписи.
+    Если проверка прошла, ссылки открываются сразу в приложении, без диалога выбора.
+    Пример assetlinks.json:
+      [{
+        "relation": ["delegate_permission/common.handle_all_urls"],
+        "target": { "namespace": "android_app",
+                    "package_name": "ru.kulikov.pr3",
+                    "sha256_cert_fingerprints": ["AB:CD:...:EF"] }
+      }]
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="ru.kulikov.pr3">
+
+    <application android:label="@string/app_name"
+        android:icon="@mipmap/ic_launcher"
+        android:theme="@style/Theme.App">
+
+        <activity
+            android:name=".ui.ProductDetailsActivity"
+            android:exported="true">
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="https" />
+                <data android:host="store.university.ru" />
+                <data android:pathPrefix="/item/" />
+            </intent-filter>
+        </activity>
+
+    </application>
+
+</manifest>

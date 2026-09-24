@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Тема 7, задание 1. Ключ Яндекс MapKit в метаданных
+
+    MapKit принимает ключ через MapKitFactory.setApiKey(...), поэтому в Application.onCreate()
+    читаем его из метаданных: packageManager.getApplicationInfo(..., GET_META_DATA).metaData.
+    Сам ключ хранится в ресурсах (в реальном проекте - подставляется из local.properties, в git не попадает).
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="ru.kulikov.pr3">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:name=".MainApplication"
+        android:label="@string/app_name"
+        android:icon="@mipmap/ic_launcher"
+        android:theme="@style/Theme.App">
+
+        <meta-data
+            android:name="ru.kulikov.pr3.YANDEX_MAPKIT_API_KEY"
+            android:value="@string/yandex_mapkit_key" />
+
+    </application>
+
+</manifest>

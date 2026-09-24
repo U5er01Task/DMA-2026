@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Блок 4, задание 39. Тип аккаунта, с которым работает SyncAdapter -->
+<account-authenticator xmlns:android="http://schemas.android.com/apk/res/android"
+    android:accountType="ru.kulikov.pr3.account"
+    android:icon="@mipmap/ic_launcher"
+    android:smallIcon="@mipmap/ic_launcher"
+    android:label="@string/account_label" />

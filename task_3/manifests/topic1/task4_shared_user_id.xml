@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Тема 1, задание 4. Разделяемый ID пользователя (android:sharedUserId)
+
+    Два приложения с одинаковым sharedUserId и одной подписью работают под одним Linux UID
+    и могут читать файлы друг друга.
+
+    ВАЖНО: атрибут устарел с API 29 (Android 10) и может быть удален в будущих версиях.
+    Убрать его из уже выпущенного приложения нельзя - пользователи потеряют данные,
+    поэтому в Android 13 добавлен android:sharedUserMaxSdkVersion: на новых устройствах
+    UID больше не разделяется. Для новых приложений вместо sharedUserId лучше
+    использовать ContentProvider или сервис с permission уровня signature.
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="ru.kulikov.pr3"
+    android:sharedUserId="ru.kulikov.shared"
+    android:sharedUserLabel="@string/app_name"
+    android:sharedUserMaxSdkVersion="32">
+
+    <application android:label="@string/app_name"
+        android:icon="@mipmap/ic_launcher"
+        android:theme="@style/Theme.App" />
+
+</manifest>

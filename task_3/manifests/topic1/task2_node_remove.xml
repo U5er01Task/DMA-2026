@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Тема 1, задание 2. Исключение из слияния (tools:node="remove")
+
+    Сторонняя библиотека (например, SDK рекламы) добавляет в свой манифест
+    READ_PHONE_STATE. При слиянии манифестов эта строка удалит разрешение
+    из итогового APK.
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="ru.kulikov.pr3">
+
+    <uses-permission
+        android:name="android.permission.READ_PHONE_STATE"
+        tools:node="remove" />
+
+    <application android:label="@string/app_name"
+        android:icon="@mipmap/ic_launcher"
+        android:theme="@style/Theme.App" />
+
+</manifest>

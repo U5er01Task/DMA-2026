@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Блок 2, задание 12. HTTP разрешен только для локального сервера разработки 192.168.1.50.
+    Для всего остального интернета cleartext запрещен.
+-->
+<network-security-config>
+    <base-config cleartextTrafficPermitted="false" />
+
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="false">192.168.1.50</domain>
+    </domain-config>
+</network-security-config>

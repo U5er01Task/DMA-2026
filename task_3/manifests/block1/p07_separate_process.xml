@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Практика 7. Аудиосервис в отдельном процессе
+
+    ":" в начале имени - приватный процесс нашего приложения (ru.kulikov.pr3:playback_process).
+    Если упадет интерфейс, музыка продолжит играть. Минус: у процесса своя память
+    и свой экземпляр Application, общаться с ним нужно через Binder/Messenger.
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="ru.kulikov.pr3">
+
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK" />
+
+    <application android:label="@string/app_name"
+        android:icon="@mipmap/ic_launcher"
+        android:theme="@style/Theme.App">
+
+        <service
+            android:name=".playback.AudioService"
+            android:exported="false"
+            android:process=":playback_process"
+            android:foregroundServiceType="mediaPlayback" />
+
+    </application>
+
+</manifest>

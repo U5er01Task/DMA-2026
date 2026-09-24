@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Тема 7, задание 2. LocaleConfig для выбора языка (Android 13+)
+
+    Начиная с Android 13 в настройках есть "Язык приложения". Список языков берется из
+    res/xml/locales_config.xml. В задании указан вариант через meta-data (так делает AndroidX
+    AppLocalesMetadataHolderService для старых версий), для Android 13+ используется атрибут localeConfig.
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="ru.kulikov.pr3">
+
+    <application
+        android:label="@string/app_name"
+        android:icon="@mipmap/ic_launcher"
+        android:theme="@style/Theme.App"
+        android:localeConfig="@xml/locales_config">
+
+        <!-- для Android 12 и ниже: AndroidX сам хранит выбранный язык -->
+        <service
+            android:name="androidx.appcompat.app.AppLocalesMetadataHolderService"
+            android:enabled="false"
+            android:exported="false">
+            <meta-data
+                android:name="autoStoreLocales"
+                android:value="true" />
+        </service>
+
+    </application>
+
+</manifest>

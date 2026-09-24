@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Тема 1, задание 3. Разрешение конфликта атрибутов (tools:replace)
+
+    Библиотека объявляет android:allowBackup="true", а нам нужно false.
+    Без tools:replace сборка упадет с ошибкой "Attribute application@allowBackup ... is also present at ...".
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="ru.kulikov.pr3">
+
+    <application
+        android:label="@string/app_name"
+        android:icon="@mipmap/ic_launcher"
+        android:theme="@style/Theme.App"
+        android:allowBackup="false"
+        tools:replace="android:allowBackup" />
+
+</manifest>

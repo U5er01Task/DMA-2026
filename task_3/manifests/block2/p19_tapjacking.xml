@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Практика 19. Защита от Overlay-атак (Tapjacking)
+
+    Тапджекинг - поверх экрана рисуется прозрачное окно, и пользователь нажимает не туда.
+    В манифесте нужного атрибута нет - защита включается у View:
+        android:filterTouchesWhenObscured="true"  (см. res/layout/activity_payment_confirm.xml)
+    Дополнительно:
+      - Android 12+: окна других приложений поверх нашего не пропускают касания по умолчанию;
+      - в коде: window.setHideOverlayWindows(true) (API 31) + разрешение HIDE_OVERLAY_WINDOWS -
+        система скрывает чужие оверлеи, пока открыт экран подтверждения.
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="ru.kulikov.pr3">
+
+    <uses-permission android:name="android.permission.HIDE_OVERLAY_WINDOWS" />
+
+    <application android:label="@string/app_name"
+        android:icon="@mipmap/ic_launcher"
+        android:theme="@style/Theme.App">
+
+        <activity
+            android:name=".payments.PaymentConfirmActivity"
+            android:exported="false"
+            android:excludeFromRecents="true" />
+
+    </application>
+
+</manifest>

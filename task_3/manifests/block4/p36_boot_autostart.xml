@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Практика 36. Автозапуск после перезагрузки
+
+    1. RECEIVE_BOOT_COMPLETED - разрешение (normal, выдается при установке).
+    2. Ресивер с BOOT_COMPLETED. exported="false" работает: системный broadcast доходит и до
+       неэкспортированных ресиверов.
+    3. В onReceive() запускаем сервис. С Android 12 запуск foreground service из фона запрещен,
+       но BOOT_COMPLETED входит в исключения. На Android 15 из BOOT_COMPLETED нельзя
+       запускать dataSync/camera/mediaPlayback и др. - поэтому здесь тип specialUse.
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="ru.kulikov.pr3">
+
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE" />
+
+    <application android:label="@string/app_name"
+        android:icon="@mipmap/ic_launcher"
+        android:theme="@style/Theme.App">
+
+        <receiver
+            android:name=".receivers.BootReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.LOCKED_BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".sync.StartupSyncService"
+            android:exported="false"
+            android:foregroundServiceType="specialUse">
+            <property
+                android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE"
+                android:value="Restore offline queue after device reboot" />
+        </service>
+
+    </application>
+
+</manifest>

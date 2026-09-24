@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Тема 5, задание 2. Разрешение POST_NOTIFICATIONS
+
+    POST_NOTIFICATIONS появилось в Android 13 (API 33) и является runtime-разрешением.
+    Обратная совместимость: на Android 12 и ниже этого разрешения нет, строка в манифесте
+    просто игнорируется, а уведомления разрешены по умолчанию. Поэтому в коде запрос делаем
+    только если Build.VERSION.SDK_INT >= 33.
+    tools:targetApi="33" - подсказка для Lint, что разрешение осознанно относится к API 33+.
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="ru.kulikov.pr3">
+
+    <uses-permission
+        android:name="android.permission.POST_NOTIFICATIONS"
+        tools:targetApi="33" />
+
+    <application android:label="@string/app_name"
+        android:icon="@mipmap/ic_launcher"
+        android:theme="@style/Theme.App" />
+
+</manifest>

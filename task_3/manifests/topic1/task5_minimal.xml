@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Тема 1, задание 5. Минимальный валидный каркас для aapt2
+
+    Минимум, который пропускает aapt2 link: корневой <manifest> с пространством имен android
+    и атрибутом package. Тег <application> необязателен, но без него нечего запускать.
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="ru.kulikov.pr3">
+
+    <application android:label="@string/app_name" />
+
+</manifest>

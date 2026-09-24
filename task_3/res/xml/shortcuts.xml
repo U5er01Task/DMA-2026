@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Блок 3, задание 24. Статические шорткаты + capability для Google Assistant (App Actions) -->
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+    <capability android:name="actions.intent.ORDER_MENU_ITEM">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="ru.kulikov.pr3"
+            android:targetClass="ru.kulikov.pr3.ui.OrderActivity" />
+    </capability>
+
+    <shortcut
+        android:shortcutId="order_food"
+        android:enabled="true"
+        android:icon="@mipmap/ic_launcher"
+        android:shortcutShortLabel="@string/shortcut_order_short"
+        android:shortcutLongLabel="@string/shortcut_order_long">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="ru.kulikov.pr3"
+            android:targetClass="ru.kulikov.pr3.ui.OrderActivity" />
+    </shortcut>
+</shortcuts>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Практика 33. Foreground Service типа dataSync (загрузка файлов)
+
+    Таймаут: атрибута для таймаута в манифесте нет. Начиная с Android 15 система сама ограничивает
+    dataSync-сервисы 6 часами за сутки и вызывает Service.onTimeout(startId, fgsType) -
+    в нем нужно остановить сервис (stopSelf), иначе будет краш.
+    Для очень долгих загрузок Google советует WorkManager / User-Initiated Data Transfer jobs.
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="ru.kulikov.pr3">
+
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application android:label="@string/app_name"
+        android:icon="@mipmap/ic_launcher"
+        android:theme="@style/Theme.App">
+
+        <service
+            android:name=".download.HeavyDownloadService"
+            android:exported="false"
+            android:foregroundServiceType="dataSync" />
+
+    </application>
+
+</manifest>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Практика 3. Splash Screen в Android 12+
+
+    Стартовая Activity использует тему Theme.App.Starting (res/values-v31/themes.xml):
+    windowSplashScreenBackground, windowSplashScreenAnimatedIcon, windowSplashScreenAnimationDuration.
+    С библиотекой androidx.core:core-splashscreen родителем будет Theme.SplashScreen,
+    а в коде вызывается installSplashScreen() до setContentView().
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="ru.kulikov.pr3">
+
+    <application android:label="@string/app_name"
+        android:icon="@mipmap/ic_launcher"
+        android:theme="@style/Theme.App">
+
+        <activity
+            android:name=".ui.MainActivity"
+            android:exported="true"
+            android:theme="@style/Theme.App.Starting">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+    </application>
+
+</manifest>

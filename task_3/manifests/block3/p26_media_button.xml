@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Практика 26. Кнопка гарнитуры (MEDIA_BUTTON)
+
+    MEDIA_BUTTON отправляет система, поэтому ресивер exported="true".
+    В современных приложениях его обычно подключают через MediaButtonReceiver из androidx.media,
+    который пересылает нажатие в MediaSession.
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="ru.kulikov.pr3">
+
+    <application android:label="@string/app_name"
+        android:icon="@mipmap/ic_launcher"
+        android:theme="@style/Theme.App">
+
+        <receiver
+            android:name=".playback.HeadsetButtonReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MEDIA_BUTTON" />
+            </intent-filter>
+        </receiver>
+
+    </application>
+
+</manifest>

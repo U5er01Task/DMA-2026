@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Практика 31. Foreground Service типа microphone
+
+    Android 14+: у каждого foreground service обязателен тип и отдельное разрешение FOREGROUND_SERVICE_<ТИП>.
+    Для microphone дополнительно нужно runtime-разрешение RECORD_AUDIO, выданное ДО запуска сервиса,
+    и запускать его можно только пока приложение видно пользователю.
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="ru.kulikov.pr3">
+
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MICROPHONE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <application android:label="@string/app_name"
+        android:icon="@mipmap/ic_launcher"
+        android:theme="@style/Theme.App">
+
+        <service
+            android:name=".voice.VoiceNoteRecorderService"
+            android:exported="false"
+            android:foregroundServiceType="microphone" />
+
+    </application>
+
+</manifest>
