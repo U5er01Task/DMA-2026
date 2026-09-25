@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Раздел 5, задание 5: английская локализация.
+    Переведены главное меню и экраны разделов 3-6. Если перевода нет,
+    Android берет строку из res/values (русский).
+-->
+<resources>
+    <string name="app_name">First Apps</string>
+    <string name="menu_header">Practical work #4\nKulikov E. A., P24-3.2</string>
+    <string name="section_basics">Sections 3–6 (practice tasks)</string>
+    <string name="section_projects">Tutorial projects</string>
+    <string name="section_level1">Level 1: simple utilities</string>
+    <string name="section_level2">Level 2: calculators</string>
+    <string name="section_level3">Level 3: two-screen scenarios</string>
+    <string name="btn_back">Back</string>
+    <string name="btn_calculate">Calculate</string>
+    <string name="error_fill_fields">Please fill in all fields!</string>
+    <string name="error_number">Invalid number!</string>
+
+    <string name="basics_greeting">Greeting (sections 3–5)</string>
+    <string name="title_welcome">Welcome!</string>
+    <string name="title_changed">Text changed successfully!</string>
+    <string name="hint_enter_name">Enter your name</string>
+    <string name="hint_enter_age">Enter your age</string>
+    <string name="btn_greet">Say hello</string>
+    <string name="btn_clear_all">Clear all</string>
+    <string name="btn_change_title">New title</string>
+    <string name="btn_hide_result">Hide answer</string>
+    <string name="btn_show_result">Show answer</string>
+    <string name="btn_counter">Counter +1</string>
+    <string name="btn_next_screen">Go to second screen</string>
+    <string name="result_placeholder">The answer will appear here</string>
+    <string name="welcome_user">Hello, %1$s! Nice to see you.</string>
+    <string name="welcome_user_age">Hello, %1$s! You are %2$d.</string>
+    <string name="counter_value">Taps: %1$d</string>
+    <string name="error_empty_name">Please enter your name!</string>
+    <string name="error_short_name">Name is too short</string>
+    <string name="toast_greeting_done">Greeting is ready</string>
+    <string name="toast_cleared">All fields cleared</string>
+
+    <string name="basics_second">Second screen</string>
+    <string name="waiting_data">Waiting for data…</string>
+    <string name="guest">Guest</string>
+    <string name="received_user">User: %1$s\nAge: %2$d\nBalance: %3$.2f RUB</string>
+    <string name="agree_rules">I agree with the rules</string>
+    <string name="btn_about">About the author</string>
+    <string name="btn_open_browser">Open browser</string>
+    <string name="btn_close">Go back</string>
+    <string name="error_no_browser">No browser found</string>
+
+    <string name="basics_about">About the author</string>
+    <string name="about_author">Author: Evgeniy Kulikov\nGroup: P24-3.2\nCourse: Mobile App Development</string>
+    <string name="about_agreed">Agreed with the rules: yes</string>
+    <string name="about_not_agreed">Agreed with the rules: no</string>
+    <string name="btn_exit">Exit</string>
+</resources>

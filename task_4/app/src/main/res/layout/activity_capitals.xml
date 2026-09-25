@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        android:id="@+id/textScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:textColor="@color/text_secondary" />
+
+    <TextView
+        android:id="@+id/textQuestion"
+        style="@style/ScreenTitle"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="24dp" />
+
+    <Button
+        android:id="@+id/buttonAnswer1"
+        style="@style/WideButton" />
+
+    <Button
+        android:id="@+id/buttonAnswer2"
+        style="@style/WideButton" />
+
+    <Button
+        android:id="@+id/buttonAnswer3"
+        style="@style/WideButton" />
+
+    <TextView
+        android:id="@+id/textFeedback"
+        style="@style/ResultText" />
+
+    <Button
+        android:id="@+id/buttonRestart"
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/capitals_restart"
+        android:visibility="gone" />
+</LinearLayout>

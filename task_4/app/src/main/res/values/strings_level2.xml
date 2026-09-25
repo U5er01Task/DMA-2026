@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="l2_bmi">11. Индекс массы тела</string>
+    <string name="bmi_weight">Вес, кг</string>
+    <string name="bmi_height">Рост, см</string>
+    <string name="bmi_result">ИМТ: %1$.1f\n%2$s</string>
+    <string name="bmi_low">Дефицит массы</string>
+    <string name="bmi_normal">Норма</string>
+    <string name="bmi_high">Избыток массы</string>
+
+    <string name="l2_fuel">12. Расход топлива</string>
+    <string name="fuel_distance">Пройдено, км</string>
+    <string name="fuel_liters">Потрачено, л</string>
+    <string name="fuel_result">Средний расход: %1$.2f л на 100 км</string>
+
+    <string name="l2_temperature">13. Конвертер температур</string>
+    <string name="temp_hint">Градусы Цельсия</string>
+    <string name="temp_to_f">В Фаренгейты</string>
+    <string name="temp_to_k">В Кельвины</string>
+    <string name="temp_result_f">%1$.1f °C = %2$.1f °F</string>
+    <string name="temp_result_k">%1$.1f °C = %2$.2f K</string>
+    <string name="temp_error_k">Ниже абсолютного нуля (−273,15 °C) температуры не бывает</string>
+
+    <string name="l2_calculator">14. Калькулятор</string>
+    <string name="calc_first">Первое число</string>
+    <string name="calc_second">Второе число</string>
+    <string name="calc_result">Результат: %1$s</string>
+    <string name="calc_div_zero">Делить на ноль нельзя!</string>
+
+    <string name="l2_discount">15. Расчет скидки</string>
+    <string name="discount_price">Цена товара, руб.</string>
+    <string name="discount_percent">Скидка, %</string>
+    <string name="discount_result">Скидка: %1$.2f руб.\nИтоговая цена: %2$.2f руб.</string>
+    <string name="discount_error">Скидка должна быть от 0 до 100%</string>
+
+    <string name="l2_currency">16. Конвертер валют</string>
+    <string name="currency_hint">Сумма в рублях</string>
+    <string name="currency_rates">Курс (фиксированный): 1 $ = %1$.2f руб., 1 € = %2$.2f руб.</string>
+    <string name="currency_result">%1$.2f руб. = %2$.2f $ = %3$.2f €</string>
+
+    <string name="l2_pin">17. Генератор PIN-кода</string>
+    <string name="pin_4">4 цифры</string>
+    <string name="pin_6">6 цифр</string>
+    <string name="pin_note">Одинаковые цифры подряд не повторяются</string>
+
+    <string name="l2_capitals">18. Тест: столицы</string>
+    <string name="capitals_question">Столица страны: %1$s</string>
+    <string name="capitals_score">Счет: %1$d из %2$d</string>
+    <string name="capitals_right">Правильно!</string>
+    <string name="capitals_wrong">Неверно, правильный ответ: %1$s</string>
+    <string name="capitals_finish">Тест окончен! Результат: %1$d из %2$d</string>
+    <string name="capitals_restart">Пройти заново</string>
+    <!-- страны, правильные ответы и по 3 варианта на вопрос (подряд) -->
+    <string-array name="capitals_countries">
+        <item>Франция</item>
+        <item>Австралия</item>
+        <item>Канада</item>
+        <item>Турция</item>
+        <item>Бразилия</item>
+    </string-array>
+    <string-array name="capitals_correct">
+        <item>Париж</item>
+        <item>Канберра</item>
+        <item>Оттава</item>
+        <item>Анкара</item>
+        <item>Бразилиа</item>
+    </string-array>
+    <string-array name="capitals_options">
+        <item>Лион</item>
+        <item>Париж</item>
+        <item>Марсель</item>
+        <item>Сидней</item>
+        <item>Мельбурн</item>
+        <item>Канберра</item>
+        <item>Оттава</item>
+        <item>Торонто</item>
+        <item>Ванкувер</item>
+        <item>Стамбул</item>
+        <item>Анкара</item>
+        <item>Измир</item>
+        <item>Рио-де-Жанейро</item>
+        <item>Сан-Паулу</item>
+        <item>Бразилиа</item>
+    </string-array>
+
+    <string name="l2_travel">19. Время в пути</string>
+    <string name="travel_distance">Расстояние, км</string>
+    <string name="travel_speed">Средняя скорость, км/ч</string>
+    <string name="travel_result">В пути: %1$d ч %2$d мин</string>
+
+    <string name="l2_password">20. Надежность пароля</string>
+    <string name="password_hint">Пароль</string>
+    <string name="password_check">Проверить</string>
+    <string name="password_weak">Слабый пароль (меньше 6 символов)</string>
+    <string name="password_medium">Средний пароль (6–10 символов)</string>
+    <string name="password_strong">Надежный пароль (больше 10 символов)</string>
+</resources>

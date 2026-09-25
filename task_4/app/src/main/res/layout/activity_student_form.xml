@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        style="@style/ScreenTitle"
+        android:text="@string/card_form_title"
+        android:textSize="24sp" />
+
+    <EditText
+        android:id="@+id/etFullName"
+        style="@style/FormField"
+        android:autofillHints="name"
+        android:hint="@string/card_hint_name"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/etGroup"
+        style="@style/FormField"
+        android:hint="@string/card_hint_group"
+        android:importantForAutofill="no"
+        android:inputType="textCapCharacters" />
+
+    <EditText
+        android:id="@+id/etSkill"
+        style="@style/FormField"
+        android:hint="@string/card_hint_skill"
+        android:importantForAutofill="no"
+        android:inputType="text" />
+
+    <Button
+        android:id="@+id/btnGenerateCard"
+        style="@style/WideButton"
+        android:text="@string/card_generate" />
+</LinearLayout>

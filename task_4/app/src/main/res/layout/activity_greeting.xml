@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Разделы 3-5. Базовая разметка из методички + задания для закрепления.
+    Раздел 3, задание 1: при orientation="horizontal" у корня все элементы встают в одну строку
+    и уезжают за правый край экрана, поэтому корень оставил vertical, а горизонтальный
+    LinearLayout использовал для ряда из двух кнопок внизу.
+-->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/brand_gray">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- Раздел 5, задание 3: векторная иконка -->
+        <ImageView
+            android:id="@+id/imageViewLogo"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_student" />
+
+        <!-- Раздел 3, задание 3: синий заголовок -->
+        <TextView
+            android:id="@+id/textViewTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            android:text="@string/title_welcome"
+            android:textColor="@color/brand_blue"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/editTextName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="name"
+            android:hint="@string/hint_enter_name"
+            android:inputType="textPersonName" />
+
+        <!-- Раздел 3, задания 2 и 4: поле возраста с отступом 20dp сверху -->
+        <EditText
+            android:id="@+id/editTextAge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:hint="@string/hint_enter_age"
+            android:importantForAutofill="no"
+            android:inputType="number" />
+
+        <Button
+            android:id="@+id/buttonGreet"
+            style="@style/WideButton"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/brand_blue"
+            android:text="@string/btn_greet" />
+
+        <!-- Раздел 3, задание 5: "Очистить всё" с красным текстом -->
+        <Button
+            android:id="@+id/buttonClear"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_clear_all"
+            android:textColor="@color/error_red" />
+
+        <TextView
+            android:id="@+id/textViewResult"
+            style="@style/ResultText"
+            android:gravity="center"
+            android:text="@string/result_placeholder" />
+
+        <TextView
+            android:id="@+id/textViewCounter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/brand_green"
+            android:textSize="16sp" />
+
+        <!-- Горизонтальный ряд кнопок (раздел 3, задание 1) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/buttonChangeTitle"
+                style="@style/Widget.Material3.Button.TonalButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:layout_weight="1"
+                android:text="@string/btn_change_title" />
+
+            <Button
+                android:id="@+id/buttonToggleResult"
+                style="@style/Widget.Material3.Button.TonalButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_weight="1"
+                android:text="@string/btn_hide_result" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/buttonCounter"
+            style="@style/WideButton"
+            android:backgroundTint="@color/brand_green"
+            android:text="@string/btn_counter" />
+
+        <Button
+            android:id="@+id/buttonNext"
+            style="@style/WideButton"
+            android:text="@string/btn_next_screen" />
+    </LinearLayout>
+</ScrollView>

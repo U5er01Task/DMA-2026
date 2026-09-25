@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Общая разметка для трех детальных экранов портфолио -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        android:id="@+id/textTitle"
+        style="@style/ScreenTitle"
+        android:textColor="@color/brand_blue" />
+
+    <TextView
+        android:id="@+id/textBody"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/card_background"
+        android:lineSpacingExtra="6dp"
+        android:padding="16dp"
+        android:textSize="17sp" />
+
+    <Button
+        android:id="@+id/buttonExtra"
+        style="@style/WideButton"
+        android:layout_marginTop="16dp"
+        android:visibility="gone" />
+</LinearLayout>

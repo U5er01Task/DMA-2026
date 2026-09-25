@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Раздел 5, задание 2: фирменные цвета -->
+    <color name="brand_blue">#1976D2</color>
+    <color name="brand_green">#388E3C</color>
+    <color name="brand_gray">#ECEFF1</color>
+
+    <color name="text_primary">#212121</color>
+    <color name="text_secondary">#78909C</color>
+    <color name="error_red">#D32F2F</color>
+    <color name="warning_orange">#F57C00</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+
+    <!-- Светофор -->
+    <color name="light_red">#E53935</color>
+    <color name="light_yellow">#FDD835</color>
+    <color name="light_green">#43A047</color>
+
+    <!-- Кликер -->
+    <color name="clicker_default">#F5F5F5</color>
+    <color name="clicker_green">#E8F5E9</color>
+    <color name="clicker_gold">#FFF9C4</color>
+
+    <color name="teal">#00796B</color>
+    <color name="card_text">#263238</color>
+    <color name="card_accent">#0288D1</color>
+</resources>

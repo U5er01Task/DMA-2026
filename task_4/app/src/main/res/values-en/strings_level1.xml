@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="l1_traffic">1. Traffic light</string>
+    <string name="traffic_red">Red</string>
+    <string name="traffic_yellow">Yellow</string>
+    <string name="traffic_green">Green</string>
+
+    <string name="l1_dice">2. Dice roller</string>
+    <string name="dice_roll">Roll the dice</string>
+    <string name="dice_rolls">Rolls: %1$d</string>
+
+    <string name="l1_quiz">3. Mini quiz</string>
+    <string name="quiz_question">What is 7 × 8?</string>
+    <string name="quiz_hint">Your answer</string>
+    <string name="quiz_check">Check</string>
+    <string name="quiz_right">Correct!</string>
+    <string name="quiz_wrong">Wrong!</string>
+
+    <string name="l1_toggle">4. Show / hide secret</string>
+    <string name="toggle_show">Show secret</string>
+    <string name="toggle_hide">Hide secret</string>
+    <string name="toggle_secret">🔑 Classroom Wi-Fi password: android2026</string>
+
+    <string name="l1_reverse">5. Text reverser</string>
+    <string name="reverse_hint">Enter a word</string>
+    <string name="reverse_button">Reverse</string>
+
+    <string name="l1_pet">6. Pet age</string>
+    <string name="pet_hint">Dog age (human years)</string>
+
+    <string name="l1_chars">7. Character counter</string>
+    <string name="chars_hint">Start typing…</string>
+    <string name="chars_count">Characters: %1$d, letters: %2$d</string>
+
+    <string name="l1_flashlight">8. Flashlight</string>
+    <string name="flashlight_on">Turn flashlight on</string>
+    <string name="flashlight_off">Turn flashlight off</string>
+
+    <string name="l1_inches">9. Centimeters to inches</string>
+    <string name="inches_hint">Centimeters</string>
+    <string name="inches_convert">Convert</string>
+    <string name="inches_result">%1$.2f cm = %2$.2f in</string>
+
+    <string name="l1_parity">10. Even or odd</string>
+    <string name="parity_hint">Whole number</string>
+    <string name="parity_check">Check</string>
+    <string name="parity_even">%1$d is even</string>
+    <string name="parity_odd">%1$d is odd</string>
+</resources>

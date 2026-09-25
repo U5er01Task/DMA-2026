@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        style="@style/ScreenTitle"
+        android:text="@string/l1_quiz" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:text="@string/quiz_question"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/editInput"
+        style="@style/FormField"
+        android:hint="@string/quiz_hint"
+        android:importantForAutofill="no"
+        android:inputType="numberSigned" />
+
+    <Button
+        android:id="@+id/buttonAction"
+        style="@style/WideButton"
+        android:text="@string/quiz_check" />
+
+    <TextView
+        android:id="@+id/textResult"
+        style="@style/ResultText"
+        android:textSize="20sp" />
+</LinearLayout>

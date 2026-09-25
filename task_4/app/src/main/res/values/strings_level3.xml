@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 21 -->
+    <string name="l3_login">21. Вход и личный кабинет</string>
+    <string name="login_title">Вход</string>
+    <string name="login_hint_user">Логин</string>
+    <string name="login_hint_password">Пароль</string>
+    <string name="login_button">Войти</string>
+    <string name="login_error">Неверный логин или пароль</string>
+    <string name="login_test_hint">Тестовый вход: admin / 1234</string>
+    <string name="cabinet_title">Личный кабинет</string>
+    <string name="cabinet_welcome">Здравствуйте, %1$s!</string>
+    <string name="cabinet_info">Вход выполнен: %1$s</string>
+    <string name="cabinet_logout">Выйти</string>
+
+    <!-- 22 -->
+    <string name="l3_pizza">22. Заказ пиццы</string>
+    <string name="pizza_title">Выберите размер</string>
+    <string name="pizza_small">25 см — 450 руб.</string>
+    <string name="pizza_medium">30 см — 650 руб.</string>
+    <string name="pizza_large">35 см — 850 руб.</string>
+    <string name="pizza_cheese">Двойной сыр (+90 руб.)</string>
+    <string name="pizza_hint_count">Количество</string>
+    <string name="pizza_hint_address">Адрес доставки</string>
+    <string name="pizza_order">Оформить заказ</string>
+    <string name="pizza_error_size">Выберите размер пиццы</string>
+    <string name="receipt_title">ЧЕК</string>
+    <string name="receipt_body">Пицца %1$d см × %2$d шт.: %3$d руб.\nДвойной сыр: %4$s\nДоставка: %5$s\nАдрес: %6$s</string>
+    <string name="receipt_total">Итого: %1$d руб.</string>
+    <string name="receipt_free_delivery">бесплатно (заказ от 1000 руб.)</string>
+    <string name="receipt_delivery_price">%1$d руб.</string>
+    <string name="yes">да</string>
+    <string name="no">нет</string>
+
+    <!-- 23 -->
+    <string name="l3_quiz">23. Квиз из двух вопросов</string>
+    <string name="quiz_q_number">Вопрос %1$d из 2</string>
+    <string name="quiz_q1">Какой метод загружает XML-разметку на экран?</string>
+    <string name="quiz_q1_a1">findViewById()</string>
+    <string name="quiz_q1_a2">setContentView()</string>
+    <string name="quiz_q1_a3">onCreate()</string>
+    <string name="quiz_q2">В каких единицах задают размер шрифта?</string>
+    <string name="quiz_q2_a1">dp</string>
+    <string name="quiz_q2_a2">px</string>
+    <string name="quiz_q2_a3">sp</string>
+    <string name="quiz_next">Далее</string>
+    <string name="quiz_finish">Завершить</string>
+    <string name="quiz_choose">Выберите вариант ответа</string>
+    <string name="quiz_total">Ваш результат: %1$d из 2</string>
+
+    <!-- 24 -->
+    <string name="l3_master">24. Визитка мастера</string>
+    <string name="master_hint_name">Имя</string>
+    <string name="master_hint_profession">Профессия</string>
+    <string name="master_hint_phone">Телефон</string>
+    <string name="master_create">Создать визитку</string>
+    <string name="master_call">Позвонить</string>
+    <string name="master_label">МАСТЕР</string>
+
+    <!-- 25 -->
+    <string name="l3_notes">25. Дневник заметок</string>
+    <string name="notes_hint">Текст заметки…</string>
+    <string name="notes_read">Режим чтения</string>
+    <string name="notes_edit">Редактировать</string>
+    <string name="notes_empty">Заметка пустая</string>
+
+    <!-- 26 -->
+    <string name="l3_loan">26. Автокредит</string>
+    <string name="loan_hint_amount">Сумма кредита, руб.</string>
+    <string name="loan_hint_rate">Ставка, % годовых</string>
+    <string name="loan_hint_months">Срок, месяцев</string>
+    <string name="loan_payment">Ежемесячный платеж: %1$.2f руб.\nПереплата: %2$.2f руб.</string>
+    <string name="loan_schedule">График выплат</string>
+    <!-- в кавычках, чтобы Android не схлопнул пробелы -->
+    <string name="loan_header">"Мес     Платеж   Проценты       Долг    Остаток"</string>
+
+    <!-- 27 -->
+    <string name="l3_ticket">27. Билет на поезд</string>
+    <string name="ticket_hint_from">Станция отправления</string>
+    <string name="ticket_hint_to">Станция прибытия</string>
+    <string name="ticket_hint_passenger">Пассажир</string>
+    <string name="ticket_buy">Оформить билет</string>
+    <string name="ticket_header">ПОСАДОЧНЫЙ КУПОН</string>
+    <string name="ticket_route">%1$s → %2$s</string>
+    <string name="ticket_details">Пассажир: %1$s\nДата: %2$s\nПоезд: %3$s\nВагон %4$d, место %5$d</string>
+    <string name="ticket_same_station">Станции отправления и прибытия совпадают</string>
+
+    <!-- 28 -->
+    <string name="l3_steps">28. Спортивный трекер</string>
+    <string name="steps_hint_goal">Цель, шагов в день</string>
+    <string name="steps_hint_done">Пройдено сегодня</string>
+    <string name="steps_show">Показать прогресс</string>
+    <string name="steps_percent">%1$d%%</string>
+    <string name="steps_done">Норма выполнена! 🎉</string>
+
+    <!-- 29 -->
+    <string name="l3_glossary">29. Мини-словарь</string>
+    <string name="glossary_title">Термины</string>
+    <string name="term_activity">Activity</string>
+    <string name="term_activity_text">Activity — один экран приложения. У нее есть жизненный цикл: onCreate, onStart, onResume, onPause, onStop, onDestroy. Каждую Activity нужно зарегистрировать в AndroidManifest.xml.</string>
+    <string name="term_intent">Intent</string>
+    <string name="term_intent_text">Intent — «намерение», сообщение системе о том, что нужно сделать. Явный Intent открывает конкретный экран приложения, неявный (например, ACTION_VIEW) просит систему найти подходящее приложение: браузер, звонилку, карты.</string>
+    <string name="term_layout">Layout</string>
+    <string name="term_layout_text">Layout — XML-файл с разметкой экрана. Описывает, какие элементы (TextView, Button, EditText) есть на экране и как они расположены. Загружается в Activity методом setContentView().</string>
+
+    <!-- 30 -->
+    <string name="l3_portfolio">30. Портфолио студента</string>
+    <string name="portfolio_name">Куликов Евгений</string>
+    <string name="portfolio_role">Студент группы П24-3.2, начинающий Android-разработчик</string>
+    <string name="portfolio_about">Обо мне</string>
+    <string name="portfolio_skills">Мои навыки</string>
+    <string name="portfolio_contacts">Контакты</string>
+    <string name="about_me_text">Учусь на специальности «Программирование». Интересуюсь мобильной разработкой, делаю первые приложения на Java под Android. Люблю, когда код работает с первого запуска (бывает редко).</string>
+    <string name="skills_text">• Java: ООП, коллекции, исключения\n• Android: Activity, Intent, XML-разметка\n• AndroidManifest: разрешения, intent-фильтры\n• Git и GitHub\n• SQL (базовый уровень)</string>
+    <string name="contacts_text">GitHub: github.com/smartakk4-blip\nГруппа: П24-3.2</string>
+    <string name="contacts_github_url" translatable="false">https://github.com/smartakk4-blip</string>
+    <string name="contacts_open_github">Открыть GitHub</string>
+</resources>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Русские окончания зависят от числа: 1 год, 2 года, 5 лет, 21 год -->
+<resources>
+    <plurals name="pet_result">
+        <item quantity="one">По-собачьи это %1$d год</item>
+        <item quantity="few">По-собачьи это %1$d года</item>
+        <item quantity="many">По-собачьи это %1$d лет</item>
+        <item quantity="other">По-собачьи это %1$d года</item>
+    </plurals>
+
+    <!-- "из 1 шага", "из 10000 шагов" - форма по второму числу (цели) -->
+    <plurals name="steps_details">
+        <item quantity="one">%1$d из %2$d шага</item>
+        <item quantity="few">%1$d из %2$d шагов</item>
+        <item quantity="many">%1$d из %2$d шагов</item>
+        <item quantity="other">%1$d из %2$d шага</item>
+    </plurals>
+
+    <plurals name="steps_left">
+        <item quantity="one">Остался %1$d шаг</item>
+        <item quantity="few">Осталось %1$d шага</item>
+        <item quantity="many">Осталось %1$d шагов</item>
+        <item quantity="other">Осталось %1$d шага</item>
+    </plurals>
+</resources>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Белая обводка, чтобы кнопка не сливалась с фоном того же цвета -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="32dp">
+
+    <Button
+        android:id="@+id/buttonRed"
+        style="@style/WideButton"
+        android:backgroundTint="@color/light_red"
+        app:strokeColor="@color/white"
+        app:strokeWidth="3dp"
+        android:text="@string/traffic_red" />
+
+    <Button
+        android:id="@+id/buttonYellow"
+        style="@style/WideButton"
+        android:backgroundTint="@color/light_yellow"
+        app:strokeColor="@color/white"
+        app:strokeWidth="3dp"
+        android:text="@string/traffic_yellow"
+        android:textColor="@color/black" />
+
+    <Button
+        android:id="@+id/buttonGreen"
+        style="@style/WideButton"
+        android:backgroundTint="@color/light_green"
+        app:strokeColor="@color/white"
+        app:strokeWidth="3dp"
+        android:text="@string/traffic_green" />
+</LinearLayout>
