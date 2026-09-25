@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.FirstApps">
+
+        <!-- Главное меню - единственная точка входа -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Экраны заданий: вызываются только из нашего приложения -->
+        <activity
+            android:name=".basics.GreetingActivity"
+            android:exported="false"
+            android:label="@string/basics_greeting" />
+        <activity
+            android:name=".basics.SecondActivity"
+            android:exported="false"
+            android:label="@string/basics_second" />
+        <activity
+            android:name=".basics.AboutActivity"
+            android:exported="false"
+            android:label="@string/basics_about" />
+        <activity
+            android:name=".projects.ClickerActivity"
+            android:exported="false"
+            android:label="@string/project_clicker" />
+        <activity
+            android:name=".projects.TipCalculatorActivity"
+            android:exported="false"
+            android:label="@string/project_tips" />
+        <activity
+            android:name=".projects.StudentFormActivity"
+            android:exported="false"
+            android:label="@string/project_card" />
+        <activity
+            android:name=".projects.StudentCardActivity"
+            android:exported="false"
+            android:label="@string/project_card" />
+        <activity
+            android:name=".level1.TrafficLightActivity"
+            android:exported="false"
+            android:label="@string/l1_traffic" />
+        <activity
+            android:name=".level1.DiceActivity"
+            android:exported="false"
+            android:label="@string/l1_dice" />
+        <activity
+            android:name=".level1.QuizActivity"
+            android:exported="false"
+            android:label="@string/l1_quiz" />
+        <activity
+            android:name=".level1.ToggleActivity"
+            android:exported="false"
+            android:label="@string/l1_toggle" />
+        <activity
+            android:name=".level1.ReverseActivity"
+            android:exported="false"
+            android:label="@string/l1_reverse" />
+        <activity
+            android:name=".level1.PetAgeActivity"
+            android:exported="false"
+            android:label="@string/l1_pet" />
+        <activity
+            android:name=".level1.CharCounterActivity"
+            android:exported="false"
+            android:label="@string/l1_chars" />
+        <activity
+            android:name=".level1.FlashlightActivity"
+            android:exported="false"
+            android:label="@string/l1_flashlight" />
+        <activity
+            android:name=".level1.CmToInchActivity"
+            android:exported="false"
+            android:label="@string/l1_inches" />
+        <activity
+            android:name=".level1.ParityActivity"
+            android:exported="false"
+            android:label="@string/l1_parity" />
+        <activity
+            android:name=".level2.BmiActivity"
+            android:exported="false"
+            android:label="@string/l2_bmi" />
+        <activity
+            android:name=".level2.FuelActivity"
+            android:exported="false"
+            android:label="@string/l2_fuel" />
+        <activity
+            android:name=".level2.TemperatureActivity"
+            android:exported="false"
+            android:label="@string/l2_temperature" />
+        <activity
+            android:name=".level2.CalculatorActivity"
+            android:exported="false"
+            android:label="@string/l2_calculator" />
+        <activity
+            android:name=".level2.DiscountActivity"
+            android:exported="false"
+            android:label="@string/l2_discount" />
+        <activity
+            android:name=".level2.CurrencyActivity"
+            android:exported="false"
+            android:label="@string/l2_currency" />
+        <activity
+            android:name=".level2.PinGeneratorActivity"
+            android:exported="false"
+            android:label="@string/l2_pin" />
+        <activity
+            android:name=".level2.CapitalsQuizActivity"
+            android:exported="false"
+            android:label="@string/l2_capitals" />
+        <activity
+            android:name=".level2.TravelTimeActivity"
+            android:exported="false"
+            android:label="@string/l2_travel" />
+        <activity
+            android:name=".level2.PasswordStrengthActivity"
+            android:exported="false"
+            android:label="@string/l2_password" />
+        <activity
+            android:name=".level3.LoginActivity"
+            android:exported="false"
+            android:label="@string/l3_login" />
+        <activity
+            android:name=".level3.CabinetActivity"
+            android:exported="false"
+            android:label="@string/cabinet_title" />
+        <activity
+            android:name=".level3.PizzaOrderActivity"
+            android:exported="false"
+            android:label="@string/l3_pizza" />
+        <activity
+            android:name=".level3.PizzaReceiptActivity"
+            android:exported="false"
+            android:label="@string/receipt_title" />
+        <activity
+            android:name=".level3.QuizQuestion1Activity"
+            android:exported="false"
+            android:label="@string/l3_quiz" />
+        <activity
+            android:name=".level3.QuizQuestion2Activity"
+            android:exported="false"
+            android:label="@string/l3_quiz" />
+        <activity
+            android:name=".level3.MasterFormActivity"
+            android:exported="false"
+            android:label="@string/l3_master" />
+        <activity
+            android:name=".level3.MasterCardActivity"
+            android:exported="false"
+            android:label="@string/l3_master" />
+        <activity
+            android:name=".level3.NoteEditActivity"
+            android:exported="false"
+            android:label="@string/l3_notes" />
+        <activity
+            android:name=".level3.NoteReadActivity"
+            android:exported="false"
+            android:label="@string/notes_read" />
+        <activity
+            android:name=".level3.CarLoanActivity"
+            android:exported="false"
+            android:label="@string/l3_loan" />
+        <activity
+            android:name=".level3.LoanScheduleActivity"
+            android:exported="false"
+            android:label="@string/loan_schedule" />
+        <activity
+            android:name=".level3.TicketFormActivity"
+            android:exported="false"
+            android:label="@string/l3_ticket" />
+        <activity
+            android:name=".level3.TicketActivity"
+            android:exported="false"
+            android:label="@string/ticket_header" />
+        <activity
+            android:name=".level3.StepsFormActivity"
+            android:exported="false"
+            android:label="@string/l3_steps" />
+        <activity
+            android:name=".level3.StepsProgressActivity"
+            android:exported="false"
+            android:label="@string/l3_steps" />
+        <activity
+            android:name=".level3.GlossaryActivity"
+            android:exported="false"
+            android:label="@string/l3_glossary" />
+        <activity
+            android:name=".level3.TermActivity"
+            android:exported="false"
+            android:label="@string/l3_glossary" />
+        <activity
+            android:name=".level3.PortfolioActivity"
+            android:exported="false"
+            android:label="@string/l3_portfolio" />
+        <activity
+            android:name=".level3.AboutMeActivity"
+            android:exported="false"
+            android:label="@string/portfolio_about" />
+        <activity
+            android:name=".level3.SkillsActivity"
+            android:exported="false"
+            android:label="@string/portfolio_skills" />
+        <activity
+            android:name=".level3.ContactsActivity"
+            android:exported="false"
+            android:label="@string/portfolio_contacts" />
+
+    </application>
+
+</manifest>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        style="@style/ScreenTitle"
+        android:text="@string/l1_reverse" />
+
+    <EditText
+        android:id="@+id/editInput"
+        style="@style/FormField"
+        android:hint="@string/reverse_hint"
+        android:importantForAutofill="no"
+        android:inputType="text" />
+
+    <Button
+        android:id="@+id/buttonAction"
+        style="@style/WideButton"
+        android:text="@string/reverse_button" />
+
+    <TextView
+        android:id="@+id/textResult"
+        style="@style/ResultText"
+        android:textSize="20sp" />
+</LinearLayout>

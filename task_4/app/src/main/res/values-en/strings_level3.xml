@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="l3_login">21. Login and account</string>
+    <string name="login_title">Sign in</string>
+    <string name="login_hint_user">Login</string>
+    <string name="login_hint_password">Password</string>
+    <string name="login_button">Sign in</string>
+    <string name="login_error">Wrong login or password</string>
+    <string name="login_test_hint">Test account: admin / 1234</string>
+    <string name="cabinet_title">My account</string>
+    <string name="cabinet_welcome">Hello, %1$s!</string>
+    <string name="cabinet_info">Signed in: %1$s</string>
+    <string name="cabinet_logout">Sign out</string>
+
+    <string name="l3_pizza">22. Pizza order</string>
+    <string name="pizza_title">Choose a size</string>
+    <string name="pizza_small">25 cm — 450 RUB</string>
+    <string name="pizza_medium">30 cm — 650 RUB</string>
+    <string name="pizza_large">35 cm — 850 RUB</string>
+    <string name="pizza_cheese">Double cheese (+90 RUB)</string>
+    <string name="pizza_hint_count">Quantity</string>
+    <string name="pizza_hint_address">Delivery address</string>
+    <string name="pizza_order">Place order</string>
+    <string name="pizza_error_size">Choose a pizza size</string>
+    <string name="receipt_title">RECEIPT</string>
+    <string name="receipt_body">Pizza %1$d cm × %2$d: %3$d RUB\nDouble cheese: %4$s\nDelivery: %5$s\nAddress: %6$s</string>
+    <string name="receipt_total">Total: %1$d RUB</string>
+    <string name="receipt_free_delivery">free (order from 1000 RUB)</string>
+    <string name="receipt_delivery_price">%1$d RUB</string>
+    <string name="yes">yes</string>
+    <string name="no">no</string>
+
+    <string name="l3_quiz">23. Two-question quiz</string>
+    <string name="quiz_q_number">Question %1$d of 2</string>
+    <string name="quiz_q1">Which method loads the XML layout onto the screen?</string>
+    <string name="quiz_q1_a1">findViewById()</string>
+    <string name="quiz_q1_a2">setContentView()</string>
+    <string name="quiz_q1_a3">onCreate()</string>
+    <string name="quiz_q2">Which unit is used for font sizes?</string>
+    <string name="quiz_q2_a1">dp</string>
+    <string name="quiz_q2_a2">px</string>
+    <string name="quiz_q2_a3">sp</string>
+    <string name="quiz_next">Next</string>
+    <string name="quiz_finish">Finish</string>
+    <string name="quiz_choose">Choose an answer</string>
+    <string name="quiz_total">Your result: %1$d of 2</string>
+
+    <string name="l3_master">24. Craftsman business card</string>
+    <string name="master_hint_name">Name</string>
+    <string name="master_hint_profession">Profession</string>
+    <string name="master_hint_phone">Phone</string>
+    <string name="master_create">Create card</string>
+    <string name="master_call">Call</string>
+    <string name="master_label">CRAFTSMAN</string>
+
+    <string name="l3_notes">25. Notes diary</string>
+    <string name="notes_hint">Note text…</string>
+    <string name="notes_read">Reading mode</string>
+    <string name="notes_edit">Edit</string>
+    <string name="notes_empty">The note is empty</string>
+
+    <string name="l3_loan">26. Car loan</string>
+    <string name="loan_hint_amount">Loan amount, RUB</string>
+    <string name="loan_hint_rate">Annual rate, %</string>
+    <string name="loan_hint_months">Term, months</string>
+    <string name="loan_payment">Monthly payment: %1$.2f RUB\nOverpayment: %2$.2f RUB</string>
+    <string name="loan_schedule">Payment schedule</string>
+    <string name="loan_header">"  #    Payment   Interest  Principal    Balance"</string>
+
+    <string name="l3_ticket">27. Train ticket</string>
+    <string name="ticket_hint_from">Departure station</string>
+    <string name="ticket_hint_to">Arrival station</string>
+    <string name="ticket_hint_passenger">Passenger</string>
+    <string name="ticket_buy">Issue ticket</string>
+    <string name="ticket_header">BOARDING PASS</string>
+    <string name="ticket_route">%1$s → %2$s</string>
+    <string name="ticket_details">Passenger: %1$s\nDate: %2$s\nTrain: %3$s\nCar %4$d, seat %5$d</string>
+    <string name="ticket_same_station">Departure and arrival stations are the same</string>
+
+    <string name="l3_steps">28. Fitness tracker</string>
+    <string name="steps_hint_goal">Daily step goal</string>
+    <string name="steps_hint_done">Steps today</string>
+    <string name="steps_show">Show progress</string>
+    <string name="steps_percent">%1$d%%</string>
+    <string name="steps_done">Goal reached! 🎉</string>
+
+    <string name="l3_glossary">29. Mini glossary</string>
+    <string name="glossary_title">Terms</string>
+    <string name="term_activity">Activity</string>
+    <string name="term_activity_text">An Activity is a single screen of an app. It has a lifecycle: onCreate, onStart, onResume, onPause, onStop, onDestroy. Every Activity must be declared in AndroidManifest.xml.</string>
+    <string name="term_intent">Intent</string>
+    <string name="term_intent_text">An Intent is a message to the system describing what should be done. An explicit Intent opens a specific screen of the app, an implicit one (for example ACTION_VIEW) asks the system to find a suitable app: a browser, a dialer, maps.</string>
+    <string name="term_layout">Layout</string>
+    <string name="term_layout_text">A layout is an XML file that describes a screen: which views (TextView, Button, EditText) it contains and how they are arranged. It is loaded into an Activity with setContentView().</string>
+
+    <string name="l3_portfolio">30. Student portfolio</string>
+    <string name="portfolio_name">Evgeniy Kulikov</string>
+    <string name="portfolio_role">Student of group P24-3.2, beginner Android developer</string>
+    <string name="portfolio_about">About me</string>
+    <string name="portfolio_skills">My skills</string>
+    <string name="portfolio_contacts">Contacts</string>
+    <string name="about_me_text">I study programming. I am interested in mobile development and write my first Android apps in Java. I love it when code works on the first run (it rarely does).</string>
+    <string name="skills_text">• Java: OOP, collections, exceptions\n• Android: Activity, Intent, XML layouts\n• AndroidManifest: permissions, intent filters\n• Git and GitHub\n• SQL (basic)</string>
+    <string name="contacts_text">GitHub: github.com/smartakk4-blip\nGroup: P24-3.2</string>
+    <string name="contacts_open_github">Open GitHub</string>
+</resources>

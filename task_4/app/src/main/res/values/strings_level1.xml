@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="l1_traffic">1. Светофор</string>
+    <string name="traffic_red">Красный</string>
+    <string name="traffic_yellow">Желтый</string>
+    <string name="traffic_green">Зеленый</string>
+
+    <string name="l1_dice">2. Бросить кубик</string>
+    <string name="dice_roll">Бросить кубик</string>
+    <string name="dice_rolls">Бросков: %1$d</string>
+
+    <string name="l1_quiz">3. Мини-тест</string>
+    <string name="quiz_question">Сколько будет 7 × 8?</string>
+    <string name="quiz_hint">Ваш ответ</string>
+    <string name="quiz_check">Проверить</string>
+    <string name="quiz_right">Верно!</string>
+    <string name="quiz_wrong">Ошибка!</string>
+
+    <string name="l1_toggle">4. Показать / скрыть секрет</string>
+    <string name="toggle_show">Показать секрет</string>
+    <string name="toggle_hide">Скрыть секрет</string>
+    <string name="toggle_secret">🔑 Пароль от Wi-Fi в кабинете: android2026</string>
+
+    <string name="l1_reverse">5. Инвертор текста</string>
+    <string name="reverse_hint">Введите слово</string>
+    <string name="reverse_button">Перевернуть</string>
+
+    <string name="l1_pet">6. Возраст питомца</string>
+    <string name="pet_hint">Возраст собаки (человеческих лет)</string>
+
+    <string name="l1_chars">7. Счетчик символов</string>
+    <string name="chars_hint">Начните печатать…</string>
+    <string name="chars_count">Символов: %1$d, букв: %2$d</string>
+
+    <string name="l1_flashlight">8. Фонарик</string>
+    <string name="flashlight_on">Включить фонарик</string>
+    <string name="flashlight_off">Выключить фонарик</string>
+
+    <string name="l1_inches">9. Сантиметры в дюймы</string>
+    <string name="inches_hint">Сантиметры</string>
+    <string name="inches_convert">Перевести</string>
+    <string name="inches_result">%1$.2f см = %2$.2f дюйма</string>
+
+    <string name="l1_parity">10. Четность числа</string>
+    <string name="parity_hint">Целое число</string>
+    <string name="parity_check">Проверить</string>
+    <string name="parity_even">Число %1$d — четное</string>
+    <string name="parity_odd">Число %1$d — нечетное</string>
+</resources>

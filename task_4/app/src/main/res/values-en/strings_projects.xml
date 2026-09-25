@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="project_clicker">Project 1. Tap clicker</string>
+    <string name="clicker_title">Click counter</string>
+    <string name="clicker_click">Click me!</string>
+    <string name="clicker_reset">Reset</string>
+    <string name="clicker_10">Great start! 10 points!</string>
+    <string name="clicker_50">Half a hundred! You are a click master!</string>
+    <string name="clicker_reset_done">Score reset</string>
+
+    <string name="project_tips">Project 2. Tip calculator</string>
+    <string name="tips_title">Bill calculator</string>
+    <string name="tips_hint_bill">Bill amount (RUB)</string>
+    <string name="tips_hint_persons">Number of people</string>
+    <string name="tips_calculate">Calculate total</string>
+    <string name="tips_amount">Tip (10%%): %1$.2f RUB</string>
+    <string name="tips_per_person">Per guest: %1$.2f RUB</string>
+    <string name="tips_error_fields">Fill in both fields!</string>
+    <string name="tips_error_bill">The bill must be greater than zero</string>
+    <string name="tips_error_persons">There must be at least 1 guest</string>
+
+    <string name="project_card">Project 3. Student card</string>
+    <string name="card_form_title">Create a card</string>
+    <string name="card_hint_name">Last and first name</string>
+    <string name="card_hint_group">Study group (e.g. IVT-22)</string>
+    <string name="card_hint_skill">Favorite technology (Java, SQL, React)</string>
+    <string name="card_generate">Generate card</string>
+    <string name="card_error_fields">Fill in every field of the form!</string>
+    <string name="card_header">STUDENT ID</string>
+    <string name="card_group">Group: %1$s</string>
+    <string name="card_skill">Stack: %1$s</string>
+    <string name="card_back">Back to the form</string>
+</resources>

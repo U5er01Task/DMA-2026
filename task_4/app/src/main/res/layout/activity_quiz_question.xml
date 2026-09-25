@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Общая разметка для обоих экранов квиза -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        android:id="@+id/textNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_secondary" />
+
+    <TextView
+        android:id="@+id/textQuestion"
+        style="@style/ScreenTitle"
+        android:layout_marginTop="12dp" />
+
+    <RadioGroup
+        android:id="@+id/radioAnswers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/radioA1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/radioA2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/radioA3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/buttonNext"
+        style="@style/WideButton"
+        android:layout_marginTop="24dp" />
+
+    <TextView
+        android:id="@+id/textTotal"
+        style="@style/ResultText"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/brand_blue"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+</LinearLayout>

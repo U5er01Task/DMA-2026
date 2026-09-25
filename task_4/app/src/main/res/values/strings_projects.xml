@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Проект 1: Тап-кликер -->
+    <string name="project_clicker">Проект 1. Тап-кликер</string>
+    <string name="clicker_title">Счетчик кликов</string>
+    <string name="clicker_click">Кликни меня!</string>
+    <string name="clicker_reset">Сбросить</string>
+    <string name="clicker_10">Отличный старт! 10 очков!</string>
+    <string name="clicker_50">Половина сотни! Ты мастер клика!</string>
+    <string name="clicker_reset_done">Счет сброшен</string>
+
+    <!-- Проект 2: Калькулятор чаевых -->
+    <string name="project_tips">Проект 2. Калькулятор чаевых</string>
+    <string name="tips_title">Калькулятор счета</string>
+    <string name="tips_hint_bill">Сумма чека (руб.)</string>
+    <string name="tips_hint_persons">Количество человек</string>
+    <string name="tips_calculate">Рассчитать итог</string>
+    <string name="tips_amount">Чаевые (10%%): %1$.2f руб.</string>
+    <string name="tips_per_person">С каждого гостя: %1$.2f руб.</string>
+    <string name="tips_error_fields">Заполните оба поля!</string>
+    <string name="tips_error_bill">Сумма чека должна быть больше нуля</string>
+    <string name="tips_error_persons">Количество гостей должно быть не менее 1</string>
+
+    <!-- Проект 3: Визитка студента -->
+    <string name="project_card">Проект 3. Визитка студента</string>
+    <string name="card_form_title">Создание визитки</string>
+    <string name="card_hint_name">Фамилия и Имя</string>
+    <string name="card_hint_group">Учебная группа (например, ИВТ-22)</string>
+    <string name="card_hint_skill">Любимая технология (Java, SQL, React)</string>
+    <string name="card_generate">Сгенерировать карту</string>
+    <string name="card_error_fields">Заполните абсолютно все поля анкеты!</string>
+    <string name="card_header">СТУДЕНЧЕСКИЙ БИЛЕТ</string>
+    <string name="card_group">Группа: %1$s</string>
+    <string name="card_skill">Стек: %1$s</string>
+    <string name="card_back">Назад к анкете</string>
+</resources>

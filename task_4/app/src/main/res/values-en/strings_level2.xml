@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="l2_bmi">11. Body mass index</string>
+    <string name="bmi_weight">Weight, kg</string>
+    <string name="bmi_height">Height, cm</string>
+    <string name="bmi_result">BMI: %1$.1f\n%2$s</string>
+    <string name="bmi_low">Underweight</string>
+    <string name="bmi_normal">Normal</string>
+    <string name="bmi_high">Overweight</string>
+
+    <string name="l2_fuel">12. Fuel consumption</string>
+    <string name="fuel_distance">Distance, km</string>
+    <string name="fuel_liters">Fuel used, l</string>
+    <string name="fuel_result">Average: %1$.2f l per 100 km</string>
+
+    <string name="l2_temperature">13. Temperature converter</string>
+    <string name="temp_hint">Degrees Celsius</string>
+    <string name="temp_to_f">To Fahrenheit</string>
+    <string name="temp_to_k">To Kelvin</string>
+    <string name="temp_result_f">%1$.1f °C = %2$.1f °F</string>
+    <string name="temp_result_k">%1$.1f °C = %2$.2f K</string>
+    <string name="temp_error_k">Nothing can be colder than absolute zero (−273.15 °C)</string>
+
+    <string name="l2_calculator">14. Calculator</string>
+    <string name="calc_first">First number</string>
+    <string name="calc_second">Second number</string>
+    <string name="calc_result">Result: %1$s</string>
+    <string name="calc_div_zero">Division by zero is not allowed!</string>
+
+    <string name="l2_discount">15. Discount calculator</string>
+    <string name="discount_price">Price, RUB</string>
+    <string name="discount_percent">Discount, %</string>
+    <string name="discount_result">Discount: %1$.2f RUB\nFinal price: %2$.2f RUB</string>
+    <string name="discount_error">Discount must be between 0 and 100%</string>
+
+    <string name="l2_currency">16. Currency converter</string>
+    <string name="currency_hint">Amount in rubles</string>
+    <string name="currency_rates">Fixed rate: 1 $ = %1$.2f RUB, 1 € = %2$.2f RUB</string>
+    <string name="currency_result">%1$.2f RUB = %2$.2f $ = %3$.2f €</string>
+
+    <string name="l2_pin">17. PIN generator</string>
+    <string name="pin_4">4 digits</string>
+    <string name="pin_6">6 digits</string>
+    <string name="pin_note">No digit is repeated twice in a row</string>
+
+    <string name="l2_capitals">18. Capitals quiz</string>
+    <string name="capitals_question">Capital of %1$s</string>
+    <string name="capitals_score">Score: %1$d of %2$d</string>
+    <string name="capitals_right">Correct!</string>
+    <string name="capitals_wrong">Wrong, the answer is %1$s</string>
+    <string name="capitals_finish">Quiz finished! Result: %1$d of %2$d</string>
+    <string name="capitals_restart">Try again</string>
+    <string-array name="capitals_countries">
+        <item>France</item>
+        <item>Australia</item>
+        <item>Canada</item>
+        <item>Turkey</item>
+        <item>Brazil</item>
+    </string-array>
+    <string-array name="capitals_correct">
+        <item>Paris</item>
+        <item>Canberra</item>
+        <item>Ottawa</item>
+        <item>Ankara</item>
+        <item>Brasília</item>
+    </string-array>
+    <string-array name="capitals_options">
+        <item>Lyon</item>
+        <item>Paris</item>
+        <item>Marseille</item>
+        <item>Sydney</item>
+        <item>Melbourne</item>
+        <item>Canberra</item>
+        <item>Ottawa</item>
+        <item>Toronto</item>
+        <item>Vancouver</item>
+        <item>Istanbul</item>
+        <item>Ankara</item>
+        <item>Izmir</item>
+        <item>Rio de Janeiro</item>
+        <item>São Paulo</item>
+        <item>Brasília</item>
+    </string-array>
+
+    <string name="l2_travel">19. Travel time</string>
+    <string name="travel_distance">Distance, km</string>
+    <string name="travel_speed">Average speed, km/h</string>
+    <string name="travel_result">Travel time: %1$d h %2$d min</string>
+
+    <string name="l2_password">20. Password strength</string>
+    <string name="password_hint">Password</string>
+    <string name="password_check">Check</string>
+    <string name="password_weak">Weak password (less than 6 characters)</string>
+    <string name="password_medium">Medium password (6–10 characters)</string>
+    <string name="password_strong">Strong password (more than 10 characters)</string>
+</resources>

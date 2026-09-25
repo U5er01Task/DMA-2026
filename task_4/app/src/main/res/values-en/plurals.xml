@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="pet_result">
+        <item quantity="one">In dog years that is %1$d year</item>
+        <item quantity="other">In dog years that is %1$d years</item>
+    </plurals>
+
+    <plurals name="steps_details">
+        <item quantity="one">%1$d of %2$d step</item>
+        <item quantity="other">%1$d of %2$d steps</item>
+    </plurals>
+
+    <plurals name="steps_left">
+        <item quantity="one">%1$d step to go</item>
+        <item quantity="other">%1$d steps to go</item>
+    </plurals>
+</resources>

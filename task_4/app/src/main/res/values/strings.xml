@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Первые приложения</string>
+
+    <!-- Главное меню -->
+    <string name="menu_header">Практическая работа №4\nКуликов Е. А., П24-3.2</string>
+    <string name="section_basics">Разделы 3–6 (задания для закрепления)</string>
+    <string name="section_projects">Учебные проекты из методички</string>
+    <string name="section_level1">Уровень 1: простые утилиты</string>
+    <string name="section_level2">Уровень 2: калькуляторы</string>
+    <string name="section_level3">Уровень 3: двухэкранные сценарии</string>
+
+    <!-- Общие -->
+    <string name="btn_back">Назад</string>
+    <string name="btn_calculate">Рассчитать</string>
+    <string name="error_fill_fields">Заполните все поля!</string>
+    <string name="error_number">Ошибка ввода числа!</string>
+
+    <!-- Символы и начальные значения, которые не переводятся -->
+    <string name="calc_plus" translatable="false">+</string>
+    <string name="calc_minus" translatable="false">−</string>
+    <string name="calc_multiply" translatable="false">×</string>
+    <string name="calc_divide" translatable="false">÷</string>
+    <string name="zero" translatable="false">0</string>
+    <string name="dice_placeholder" translatable="false">?</string>
+    <string name="pin_placeholder" translatable="false">————</string>
+    <string name="default_count" translatable="false">1</string>
+    <string name="default_steps_goal" translatable="false">10000</string>
+</resources>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Разделы 3-5: первый экран -->
+    <string name="basics_greeting">Приветствие (разделы 3–5)</string>
+    <string name="title_welcome">Добро пожаловать!</string>
+    <string name="title_changed">Текст успешно изменен!</string>
+    <string name="hint_enter_name">Введите ваше имя</string>
+    <string name="hint_enter_age">Введите ваш возраст</string>
+    <string name="btn_greet">Поздороваться</string>
+    <string name="btn_clear_all">Очистить всё</string>
+    <string name="btn_change_title">Новый заголовок</string>
+    <string name="btn_hide_result">Скрыть ответ</string>
+    <string name="btn_show_result">Показать ответ</string>
+    <string name="btn_counter">Счетчик +1</string>
+    <string name="btn_next_screen">Перейти на второй экран</string>
+    <string name="result_placeholder">Здесь появится ответ</string>
+    <string name="welcome_user">Привет, %1$s! Рады тебя видеть.</string>
+    <string name="welcome_user_age">Привет, %1$s! Тебе %2$d.</string>
+    <string name="counter_value">Нажатий: %1$d</string>
+    <string name="error_empty_name">Пожалуйста, введите имя!</string>
+    <string name="error_short_name">Слишком короткое имя</string>
+    <string name="toast_greeting_done">Приветствие готово</string>
+    <string name="toast_cleared">Все поля очищены</string>
+
+    <!-- Раздел 6: второй экран -->
+    <string name="basics_second">Второй экран</string>
+    <string name="waiting_data">Ожидание данных…</string>
+    <string name="guest">Гость</string>
+    <string name="received_user">Пользователь: %1$s\nВозраст: %2$d\nБаланс: %3$.2f руб.</string>
+    <string name="agree_rules">Я согласен с правилами</string>
+    <string name="btn_about">Об авторе</string>
+    <string name="btn_open_browser">Открыть браузер</string>
+    <string name="btn_close">Вернуться назад</string>
+    <string name="browser_url" translatable="false">https://google.com</string>
+    <string name="error_no_browser">Не найден браузер</string>
+
+    <!-- Раздел 6: третий экран -->
+    <string name="basics_about">Об авторе</string>
+    <string name="about_author">Автор: Куликов Евгений Анатольевич\nГруппа: П24-3.2\nДисциплина: Разработка мобильных приложений</string>
+    <string name="about_agreed">Согласие с правилами: да</string>
+    <string name="about_not_agreed">Согласие с правилами: нет</string>
+    <string name="btn_exit">Выход</string>
+</resources>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        style="@style/ScreenTitle"
+        android:text="@string/l3_loan" />
+
+    <EditText
+        android:id="@+id/editAmount"
+        style="@style/FormField"
+        android:hint="@string/loan_hint_amount"
+        android:importantForAutofill="no"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/editRate"
+        style="@style/FormField"
+        android:hint="@string/loan_hint_rate"
+        android:importantForAutofill="no"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/editMonths"
+        style="@style/FormField"
+        android:hint="@string/loan_hint_months"
+        android:importantForAutofill="no"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/buttonCalculate"
+        style="@style/WideButton"
+        android:text="@string/btn_calculate" />
+
+    <TextView
+        android:id="@+id/textPayment"
+        style="@style/ResultText" />
+
+    <Button
+        android:id="@+id/buttonSchedule"
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:enabled="false"
+        android:text="@string/loan_schedule" />
+</LinearLayout>

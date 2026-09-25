@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        style="@style/ScreenTitle"
+        android:text="@string/l2_calculator" />
+
+    <EditText
+        android:id="@+id/editFirst"
+        style="@style/FormField"
+        android:hint="@string/calc_first"
+        android:importantForAutofill="no"
+        android:inputType="numberDecimal|numberSigned" />
+
+    <EditText
+        android:id="@+id/editSecond"
+        style="@style/FormField"
+        android:hint="@string/calc_second"
+        android:importantForAutofill="no"
+        android:inputType="numberDecimal|numberSigned" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/buttonPlus"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:text="@string/calc_plus"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/buttonMinus"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:text="@string/calc_minus"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/buttonMultiply"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:text="@string/calc_multiply"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/buttonDivide"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:text="@string/calc_divide"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textResult"
+        style="@style/ResultText"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+</LinearLayout>

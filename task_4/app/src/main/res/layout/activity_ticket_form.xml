@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        style="@style/ScreenTitle"
+        android:text="@string/l3_ticket" />
+
+    <EditText
+        android:id="@+id/editFrom"
+        style="@style/FormField"
+        android:hint="@string/ticket_hint_from"
+        android:importantForAutofill="no"
+        android:inputType="textCapWords" />
+
+    <EditText
+        android:id="@+id/editTo"
+        style="@style/FormField"
+        android:hint="@string/ticket_hint_to"
+        android:importantForAutofill="no"
+        android:inputType="textCapWords" />
+
+    <EditText
+        android:id="@+id/editPassenger"
+        style="@style/FormField"
+        android:autofillHints="name"
+        android:hint="@string/ticket_hint_passenger"
+        android:inputType="textPersonName" />
+
+    <Button
+        android:id="@+id/buttonBuy"
+        style="@style/WideButton"
+        android:text="@string/ticket_buy" />
+</LinearLayout>

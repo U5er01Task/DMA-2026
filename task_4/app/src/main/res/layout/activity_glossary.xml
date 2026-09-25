@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        style="@style/ScreenTitle"
+        android:text="@string/glossary_title" />
+
+    <Button
+        android:id="@+id/buttonActivity"
+        style="@style/WideButton"
+        android:text="@string/term_activity" />
+
+    <Button
+        android:id="@+id/buttonIntent"
+        style="@style/WideButton"
+        android:text="@string/term_intent" />
+
+    <Button
+        android:id="@+id/buttonLayout"
+        style="@style/WideButton"
+        android:text="@string/term_layout" />
+</LinearLayout>
