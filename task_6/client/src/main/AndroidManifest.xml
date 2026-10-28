@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="com.university.app.permission.READ_NOTES"/>
+    <queries>
+        <provider android:authorities="com.university.app.notes"/>
+    </queries>
+    <application android:label="Android80 Client" android:theme="@android:style/Theme.Material.Light.NoActionBar">
+        <activity android:name=".ClientActivity" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>
