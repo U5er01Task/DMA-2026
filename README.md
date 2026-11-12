@@ -1,6 +1,5 @@
 ---
 title: "Экзаменационные вопросы по дисциплине «Разработка мобильных приложений»"
-discipline: "Разработка мобильных приложений"
 tags: [mobile-dev, exam, questions, java, android, dart, flutter]
 ---
 
